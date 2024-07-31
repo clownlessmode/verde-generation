@@ -1,5 +1,5 @@
 import React from "react";
-import css from "./team.module.scss";
+import css from "./Team.module.scss";
 import Breadcrumb from "../breadcrumb/Breadcrumb";
 import Image from "next/image";
 
