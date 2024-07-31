@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 1280px;
+
+  h1 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 112%;
+    text-align: justify;
+    span {
+      color: #2e8b57;
+    }
+  }
+  .pwrapper p {
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 0.5;
+    text-align: justify;
+  }
+}

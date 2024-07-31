@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 92px;
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 32px;
+  }
+  a {
+    transition: all ease 0.3s;
+  }
+  a:hover {
+    scale: 1.05;
+  }
+}

@@ -1,0 +1,53 @@
+.wrapper {
+  width: 1280px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+
+  h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .allactivities {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .activity {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+    .one {
+      max-width: 243px;
+    }
+
+    .two {
+      max-width: 228px;
+    }
+
+    .three {
+      max-width: 368px;
+    }
+
+    .four {
+      max-width: 263px;
+    }
+  }
+}
+
+.activityhead {
+  font-size: 32px;
+  font-weight: 600;
+  color: #2e8b57;
+}
+
+.activitydesc {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  opacity: 0.5;
+}
