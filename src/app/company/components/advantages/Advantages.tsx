@@ -10,7 +10,7 @@ const Advantages = () => {
       <Breadcrumb initial="О компании" page="Преимущества" />
       <Tabs
         defaultValue="slimdrill"
-        className="w-[1280px] flex flex-row gap-[60px]"
+        className="w-[1280px] flex flex-row justify-between"
       >
         <TabsList className="flex flex-columm items-start justify-left bg-inherit gap-[23px] text-[#000000] text-wrap">
           <TabsTrigger
@@ -54,12 +54,12 @@ const Advantages = () => {
         <TabsContent value="slimdrill" className={css.tabsContent}>
           <Image
             alt=""
-            src={"/assets/company/advantages/npz.png"}
+            src={"/assets/company/advantages/image.png"}
             height={640}
             width={909}
             className="bg-cover"
           />
-          <p className="opacity-50 pt-[18px]">
+          <p>
             Мы применяем инновационные технологии бурения, которые позволяют
             снижать затраты на бурение в 2-3 раза. Наш опыт включает успешное
             бурение 50 скважин с использованием метода Slim Drill.
