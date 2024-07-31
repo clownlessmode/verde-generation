@@ -8,7 +8,10 @@ const Advantages = () => {
   return (
     <section className={css.wrapper}>
       <Breadcrumb initial="О компании" page="Преимущества" />
-      <Tabs defaultValue="slimdrill" className="w-[1280px] flex flex-row gap-[60px]">
+      <Tabs
+        defaultValue="slimdrill"
+        className="w-[1280px] flex flex-row gap-[60px]"
+      >
         <TabsList className="flex flex-columm items-start justify-left bg-inherit gap-[23px] text-[#000000] text-wrap">
           <TabsTrigger
             value="techs"
@@ -38,7 +41,10 @@ const Advantages = () => {
             Внедрение искусственного интеллекта (AI Operator)
           </TabsTrigger>
         </TabsList>
-        <TabsContent value="techs">Текст techs.</TabsContent>
+        <TabsContent value="techs">
+          {" "}
+          <Image alt="" src={"/assets;"} /> Текст techs.
+        </TabsContent>
         <TabsContent value="slimdrill">
           Мы применяем инновационные технологии бурения, которые позволяют
           снижать затраты на бурение в 2-3 раза. Наш опыт включает успешное
