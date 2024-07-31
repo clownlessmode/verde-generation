@@ -20,6 +20,7 @@ const buttonVariants = cva(
         default: "bg-[#008080]",
         secondary: "bg-[#2E8B57]",
         ghost: "text-black",
+        outline: "",
       },
       size: {
         default: "px-[24px] py-[16px] ",

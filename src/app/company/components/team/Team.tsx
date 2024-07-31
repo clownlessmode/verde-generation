@@ -15,10 +15,39 @@ const Textaboutus = () => {
             height={411}
             width={411}
           />
-          <h1>Новый Айфончик Тонировкович</h1>
-          <p>Президент ООО «Попперс»</p>
-          <div className={css.line}/>
+          <div className={css.teammembertext}>
+            <h1>Новый Айфончик Тонировкович</h1>
+            <p>Президент ООО «Попперс»</p>
+            <div className={css.line} />
+          </div>
         </div>
+        <div className={css.teammember}>
+          <Image
+            alt=""
+            src={"/assets/company/team/team.png"}
+            height={411}
+            width={411}
+          />
+          <div className={css.teammembertext}>
+            <h1>Новый Айфончик Тонировкович</h1>
+            <p>Президент ООО «Попперс»</p>
+            <div className={css.line} />
+          </div>
+        </div>
+        <div className={css.teammember}>
+          <Image
+            alt=""
+            src={"/assets/company/team/team.png"}
+            height={411}
+            width={411}
+          />
+          <div className={css.teammembertext}>
+            <h1>Новый Айфончик Тонировкович</h1>
+            <p>Президент ООО «Попперс»</p>
+            <div className={css.line} />
+          </div>
+        </div>
+        
       </div>
     </section>
   );
