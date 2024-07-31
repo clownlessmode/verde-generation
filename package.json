@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npx json-server --watch db.json --port 5123 && next build ",
+    "build": "npx json-server --watch db.json --port 5123 & next build ",
     "start": "next start",
     "lint": "next lint",
     "server": "json-server db.json --port 3212"

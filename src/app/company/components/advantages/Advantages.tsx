@@ -51,13 +51,12 @@ const Advantages = () => {
           />
           Текст techs.
         </TabsContent>
-        <TabsContent value="slimdrill">
+        <TabsContent value="slimdrill" className={css.tabsContent}>
           <Image
             alt=""
             src={"/assets/company/advantages/npz.png"}
             height={640}
             width={909}
-
             className="bg-cover"
           />
           <p className="opacity-50 pt-[18px]">
