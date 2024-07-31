@@ -57,11 +57,14 @@ const Advantages = () => {
             src={"/assets/company/advantages/npz.png"}
             height={640}
             width={909}
-            className="opacity-100"
+
+            className="bg-cover"
           />
-          <p className="opacity-50">Мы применяем инновационные технологии бурения, которые позволяют
-          снижать затраты на бурение в 2-3 раза. Наш опыт включает успешное
-          бурение 50 скважин с использованием метода Slim Drill.</p>
+          <p className="opacity-50">
+            Мы применяем инновационные технологии бурения, которые позволяют
+            снижать затраты на бурение в 2-3 раза. Наш опыт включает успешное
+            бурение 50 скважин с использованием метода Slim Drill.
+          </p>
         </TabsContent>
         <TabsContent value="redox">Текст redox.</TabsContent>
         <TabsContent value="lpg">Текст lpg.</TabsContent>
