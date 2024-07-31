@@ -9,7 +9,7 @@ import {
 
 const Company = () => {
   return (
-    <section className={css.wrapper}>
+    <section className={css.wrapper} id="company">
       <h2>Компания</h2>
       <Accordion type="multiple" className="">
         <AccordionItem value="item-1">

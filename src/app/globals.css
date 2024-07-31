@@ -4,8 +4,11 @@
 
 html {
   background: #ffffff;
+  scroll-behavior: smooth;
 }
-
+[id] {
+  scroll-margin-top: 80px; /* Измените это значение на нужный вам отступ */
+}
 body {
   background: #ffffff;
 }

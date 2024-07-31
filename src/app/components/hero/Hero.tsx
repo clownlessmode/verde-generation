@@ -8,9 +8,10 @@ const Hero = () => {
     <section className={css.wrapper}>
       <h1>Verde: Комплексный Подход к Разработке Нефтегазовых Месторождений</h1>
       <div>
-        <Button variant={"secondary"}>Связаться с нами</Button>
-        <Link href="#">
-          <Image alt="" src="/assets/Hero/arrow.svg" width={24} height={24} />
+        <Link href="contacts">
+        <Button variant={"secondary"}>Связаться с нами</Button></Link>
+        <Link href="#company">
+          <Image alt="" src="/assets/hero/arrow.svg" width={24} height={24} />
           <p>Узнать больше</p>
         </Link>
       </div>

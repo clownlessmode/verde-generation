@@ -8,6 +8,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import Link from "next/link";
+import { transliterate } from "@/lib/translicate";
 interface Dates {
   timestart: string;
   timeend: string;
@@ -62,7 +64,7 @@ const projects: Project[] = [
     },
   },
   {
-    title: "Volga Gas",
+    title: "ТПГК",
     description:
       "Проект демонстрировал впечатляющие результаты: 20 млн баррелей запасов, суточная добыча до 1 млн м³ газа и 500 тонн нефти. Проект приносил до 17 млн долларов дивидендов в год. 250 специалистов управляли 40 скважинами.",
     mainImage: "/assets/aboutus/npz.jpg",
@@ -91,7 +93,65 @@ const projects: Project[] = [
     },
   },
   {
-    title: "Volga Gas",
+    title: "Урал Газ",
+    description:
+      "Проект демонстрировал впечатляющие результаты: 20 млн баррелей запасов, суточная добыча до 1 млн м³ газа и 500 тонн нефти. Проект приносил до 17 млн долларов дивидендов в год. 250 специалистов управляли 40 скважинами.",
+    mainImage: "/assets/aboutus/npz.jpg",
+    subImage: "/assets/aboutus/npz.jpg",
+    dates: [
+      {
+        timestart: "2015",
+        timeend: "2021",
+        names: "Baring Vostok, Mike Calve, Alex Kalinin",
+      },
+      {
+        timestart: "2015",
+        timeend: "2021",
+        names: "Baring Vostok, Mike Calve, Alex Kalinin",
+      },
+    ],
+    stats: {
+      stocks: "20 МЛН баррелей НЭ",
+      gasProduction: "До 1 МЛН м3/сутки",
+      oilProduction: "До 500 тонн/сутки",
+      spbt: "До 100 тонн/сутки",
+      dividents: "До 17 МЛН долларов/год",
+      team: "250 человек",
+      newWells: "40",
+      payback: "менее 2 лет",
+    },
+  },
+  {
+    title: "Ульяновск/Пенза",
+    description:
+      "Проект демонстрировал впечатляющие результаты: 20 млн баррелей запасов, суточная добыча до 1 млн м³ газа и 500 тонн нефти. Проект приносил до 17 млн долларов дивидендов в год. 250 специалистов управляли 40 скважинами.",
+    mainImage: "/assets/aboutus/npz.jpg",
+    subImage: "/assets/aboutus/npz.jpg",
+    dates: [
+      {
+        timestart: "2015",
+        timeend: "2021",
+        names: "Baring Vostok, Mike Calve, Alex Kalinin",
+      },
+      {
+        timestart: "2015",
+        timeend: "2021",
+        names: "Baring Vostok, Mike Calve, Alex Kalinin",
+      },
+    ],
+    stats: {
+      stocks: "20 МЛН баррелей НЭ",
+      gasProduction: "До 1 МЛН м3/сутки",
+      oilProduction: "До 500 тонн/сутки",
+      spbt: "До 100 тонн/сутки",
+      dividents: "До 17 МЛН долларов/год",
+      team: "250 человек",
+      newWells: "40",
+      payback: "менее 2 лет",
+    },
+  },
+  {
+    title: "Узбекистан",
     description:
       "Проект демонстрировал впечатляющие результаты: 20 млн баррелей запасов, суточная добыча до 1 млн м³ газа и 500 тонн нефти. Проект приносил до 17 млн долларов дивидендов в год. 250 специалистов управляли 40 скважинами.",
     mainImage: "/assets/aboutus/npz.jpg",
@@ -128,7 +188,11 @@ export function Projects() {
         <CarouselContent>
           {projects.map((item, index) => (
             <CarouselItem key={index}>
-              <div className={css.sides} key={index}>
+              <Link
+                href={transliterate(item.title)}
+                className={css.sides}
+                key={index}
+              >
                 <div className={css.side}>
                   <div className={css.header}>
                     <h2>{item.title}</h2>
@@ -200,7 +264,7 @@ export function Projects() {
                     <div className={css.separator} />
                   </div>
                 </div>
-              </div>
+              </Link>
             </CarouselItem>
           ))}
         </CarouselContent>
