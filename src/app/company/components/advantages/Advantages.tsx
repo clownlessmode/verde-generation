@@ -8,21 +8,33 @@ const Advantages = () => {
   return (
     <section className={css.wrapper}>
       <Breadcrumb initial="О компании" page="Преимущества" />
-      <Tabs defaultValue="account" className="w-[400px] flex flex-row">
-        <TabsList className="flex flex-columm bg-inherit gap-20 text-[#000000]">
-          <TabsTrigger value="techs">
+      <Tabs defaultValue="slimdrill" className="w-[1280px] flex flex-row gap-[60px]">
+        <TabsList className="flex flex-columm items-start justify-left bg-inherit gap-[23px] text-[#000000] text-wrap">
+          <TabsTrigger
+            value="techs"
+            className="text-[24px]  text-wrap text-left"
+          >
             Современное оборудование и технологии
           </TabsTrigger>
-          <TabsTrigger value="slimdrill">
+          <TabsTrigger
+            value="slimdrill"
+            className="text-[24px]  text-wrap text-left"
+          >
             Инновационные технологии бурения (Slim Drill)
           </TabsTrigger>
-          <TabsTrigger value="redox">
+          <TabsTrigger
+            value="redox"
+            className="text-[24px] text-wrap text-left"
+          >
             Эффективные процессы очистки газа (Redox)
           </TabsTrigger>
-          <TabsTrigger value="lpg">
+          <TabsTrigger value="lpg" className="text-[24px]  text-wrap text-left">
             Конверсия факельного газа в сжиженный газ (LPG)
           </TabsTrigger>
-          <TabsTrigger value="aioperator">
+          <TabsTrigger
+            value="aioperator"
+            className="text-[24px]  text-wrap text-left"
+          >
             Внедрение искусственного интеллекта (AI Operator)
           </TabsTrigger>
         </TabsList>
