@@ -55,8 +55,13 @@ const HeaderItems: HeaderItem[] = [
       },
 
       {
-        title: "Новый айфончик",
+        title: "Команда",
         href: "/company/team",
+      },
+
+      {
+        title: "Преимущества",
+        href: "/company/advantages",
       },
     ],
   },
