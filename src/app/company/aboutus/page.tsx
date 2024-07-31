@@ -14,7 +14,7 @@ const page = () => {
         width={1280}
         style={{
           maxHeight: "894px",
-          maxWidth: "1280px",
+          maxWidth: "1270px",
           objectFit: "cover",
         }}
       />
