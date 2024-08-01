@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const page = () => {
   return (
-    <main className="flex flex-col gap-20 justify-center items-center">
+    <main className="flex flex-col gap-10 justify-center items-center">
       <Texthistory />
       <Image
         alt=""
