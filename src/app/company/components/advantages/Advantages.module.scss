@@ -1,12 +1,19 @@
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 1280px;
 
-    .tabsContent p {
-        opacity: 0.5;
-        padding-top: 18px;
-        text-align: justify;
-    }
+  .tabsContent p {
+    opacity: 0.5;
+    padding-top: 18px;
+    text-align: justify;
+  }
+
+  .Trigger {
+    font-size: 24px;
+    text-wrap: wrap;
+    text-align: left;
+    line-height: 32px;
+  }
 }

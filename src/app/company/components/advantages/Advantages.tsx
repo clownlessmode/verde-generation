@@ -13,43 +13,30 @@ const Advantages = () => {
         className="w-[1280px] flex flex-row justify-between"
       >
         <TabsList className="flex flex-columm items-start justify-left bg-inherit gap-[23px] text-[#000000] text-wrap">
-          <TabsTrigger
-            value="techs"
-            className="text-[24px]  text-wrap text-left"
-          >
+          <TabsTrigger value="techs" className={css.Trigger}>
             Современное оборудование и технологии
           </TabsTrigger>
-          <TabsTrigger
-            value="slimdrill"
-            className="text-[24px]  text-wrap text-left"
-          >
+          <TabsTrigger value="slimdrill" className={css.Trigger}>
             Инновационные технологии бурения (Slim Drill)
           </TabsTrigger>
-          <TabsTrigger
-            value="redox"
-            className="text-[24px] text-wrap text-left"
-          >
+          <TabsTrigger value="redox" className={css.Trigger}>
             Эффективные процессы очистки газа (Redox)
           </TabsTrigger>
-          <TabsTrigger value="lpg" className="text-[24px]  text-wrap text-left">
+          <TabsTrigger value="lpg" className={css.Trigger}>
             Конверсия факельного газа в сжиженный газ (LPG)
           </TabsTrigger>
-          <TabsTrigger
-            value="aioperator"
-            className="text-[24px]  text-wrap text-left"
-          >
+          <TabsTrigger value="aioperator" className={css.Trigger}>
             Внедрение искусственного интеллекта (AI Operator)
           </TabsTrigger>
         </TabsList>
-        <TabsContent value="techs">
+        <TabsContent value="techs" className={css.tabsContent}>
           <Image
             alt=""
-            src={"/assets/company/advantages/npz.png"}
+            src={"/assets/company/advantages/image.png"}
             height={640}
             width={909}
-            className="opacity-100"
           />
-          Текст techs.
+          <p>Текст techs.</p>
         </TabsContent>
         <TabsContent value="slimdrill" className={css.tabsContent}>
           <Image
@@ -57,7 +44,6 @@ const Advantages = () => {
             src={"/assets/company/advantages/image.png"}
             height={640}
             width={909}
-            className="bg-cover"
           />
           <p>
             Мы применяем инновационные технологии бурения, которые позволяют
@@ -65,9 +51,33 @@ const Advantages = () => {
             бурение 50 скважин с использованием метода Slim Drill.
           </p>
         </TabsContent>
-        <TabsContent value="redox">Текст redox.</TabsContent>
-        <TabsContent value="lpg">Текст lpg.</TabsContent>
-        <TabsContent value="aioperator">Текст Ai Operator.</TabsContent>
+        <TabsContent value="redox" className={css.tabsContent}>
+          <Image
+            alt=""
+            src={"/assets/company/advantages/image.png"}
+            height={640}
+            width={909}
+          />
+          Текст redox.
+        </TabsContent>
+        <TabsContent value="lpg" className={css.tabsContent}>
+          <Image
+            alt=""
+            src={"/assets/company/advantages/image.png"}
+            height={640}
+            width={909}
+          />
+          <p>Текст lpg.</p>
+        </TabsContent>
+        <TabsContent value="aioperator" className={css.tabsContent}>
+          <Image
+            alt=""
+            src={"/assets/company/advantages/image.png"}
+            height={640}
+            width={909}
+          />
+          <p>Текст Ai Operator.</p>
+        </TabsContent>
       </Tabs>
     </section>
   );
