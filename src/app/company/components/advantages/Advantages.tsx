@@ -16,6 +16,9 @@ const Advantages = () => {
           <TabsTrigger value="techs" className={css.Trigger}>
             Современное оборудование и технологии
           </TabsTrigger>
+          <TabsTrigger value="hiclassspec" className={css.Trigger}>
+            Специалисты высокого класса
+          </TabsTrigger>
           <TabsTrigger value="slimdrill" className={css.Trigger}>
             Инновационные технологии бурения (Slim Drill)
           </TabsTrigger>
@@ -36,7 +39,23 @@ const Advantages = () => {
             height={640}
             width={909}
           />
-          <p>Текст techs.</p>
+          <p>
+            Наше новейшее оборудование и технологии повышают эффективность
+            работы и снижают воздействие на окружающую среду. Технология захвата
+            и переработки факельного газа делает мир чище.
+          </p>
+        </TabsContent>
+        <TabsContent value="hiclassspec" className={css.tabsContent}>
+          <Image
+            alt=""
+            src={"/assets/company/advantages/image.png"}
+            height={640}
+            width={909}
+          />
+          <p>
+            Высококвалифицированные специалисты с опытом в бурении и ремонте
+            гарантируют высокое качество и соблюдение сроков.
+          </p>
         </TabsContent>
         <TabsContent value="slimdrill" className={css.tabsContent}>
           <Image
@@ -46,9 +65,8 @@ const Advantages = () => {
             width={909}
           />
           <p>
-            Мы применяем инновационные технологии бурения, которые позволяют
-            снижать затраты на бурение в 2-3 раза. Наш опыт включает успешное
-            бурение 50 скважин с использованием метода Slim Drill.
+            Используем технологии Slim Drill, что снижает затраты на бурение в
+            2-3 раза. Успешно пробурили 50 скважин.
           </p>
         </TabsContent>
         <TabsContent value="redox" className={css.tabsContent}>
@@ -58,7 +76,10 @@ const Advantages = () => {
             height={640}
             width={909}
           />
-          <p>Текст redox.</p>
+          <p>
+            Процесс Redox эффективно очищает газ от H2S, снижая выбросы и
+            энергопотребление при широких рабочих давлениях.
+          </p>
         </TabsContent>
         <TabsContent value="lpg" className={css.tabsContent}>
           <Image
@@ -67,7 +88,10 @@ const Advantages = () => {
             height={640}
             width={909}
           />
-          <p>Текст lpg.</p>
+          <p>
+            Наши проекты по конверсии факельного газа в LPG увеличивают КПД до
+            94%, окупая затраты менее чем за год.
+          </p>
         </TabsContent>
         <TabsContent value="aioperator" className={css.tabsContent}>
           <Image
@@ -76,7 +100,11 @@ const Advantages = () => {
             height={640}
             width={909}
           />
-          <p>Текст Ai Operator.</p>
+          <p>
+            Использование искусственного интеллекта для управления производством
+            LPG повышает общую эффективность, контролируя десятки параметров
+            одновременно.
+          </p>
         </TabsContent>
       </Tabs>
     </section>

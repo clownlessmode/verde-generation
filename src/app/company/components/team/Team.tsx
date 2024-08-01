@@ -19,8 +19,8 @@ const Textaboutus = () => {
                 width={411}
               />
               <div className={css.teammembertext}>
-                <h2>Новый Айфончик Тонировкович</h2>
-                <p>Президент ООО «Попперс»</p>
+                <h2>Зозуля Андрей Викторович </h2>
+                <p>СЕО</p>
                 <div className={css.line} />
               </div>
             </div>
@@ -32,8 +32,8 @@ const Textaboutus = () => {
                 width={411}
               />
               <div className={css.teammembertext}>
-                <h2>Новый Айфончик Тонировкович</h2>
-                <p>Президент ООО «Попперс»</p>
+                <h2>Ким Надежда Александровна </h2>
+                <p>Финансовый директор</p>
                 <div className={css.line} />
               </div>
             </div>
@@ -45,8 +45,21 @@ const Textaboutus = () => {
                 width={411}
               />
               <div className={css.teammembertext}>
-                <h2>Новый Айфончик Тонировкович</h2>
-                <p>Президент ООО «Попперс»</p>
+                <h2>Вишняков Денис Александрович</h2>
+                <p>Бизнес-ассистент</p>
+                <div className={css.line} />
+              </div>
+            </div>
+            <div className={css.teammember}>
+              <Image
+                alt=""
+                src={"/assets/company/team/team.png"}
+                height={411}
+                width={411}
+              />
+              <div className={css.teammembertext}>
+                <h2>Рубан Константин Юрьевич </h2>
+                <p>Технический директор</p>
                 <div className={css.line} />
               </div>
             </div>
