@@ -51,13 +51,36 @@
     background-color: #f9f9f9;
     border-radius: 139px;
     padding: 4px;
-    
   }
 
   a:hover {
     scale: 1.05;
   }
-  
 }
 
+@media screen and (max-width: 800px) {
+  .wrapper {
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    text-align: center;
+  }
+}
 
+@media screen and (max-width: 575px) {
+  .wrapper {
+    h1 {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper {
+    div {
+      flex-direction: column;
+    }
+  }
+}

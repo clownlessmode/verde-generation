@@ -1,5 +1,6 @@
 .wrapper {
-  width: 1280px;
+  max-width: 1280px;
+  width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -14,6 +15,7 @@
   .allactivities {
     display: flex;
     justify-content: space-between;
+    max-width: 1280px;
     width: 100%;
 
     .activity {
@@ -23,18 +25,22 @@
     }
     .one {
       max-width: 243px;
+      width: 100%;
     }
 
     .two {
       max-width: 228px;
+      width: 100%;
     }
 
     .three {
       max-width: 368px;
+      width: 100%;
     }
 
     .four {
       max-width: 263px;
+      width: 100%;
     }
   }
 }

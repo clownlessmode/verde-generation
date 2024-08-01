@@ -44,7 +44,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         <ConvexClientProvider>{children}</ConvexClientProvider>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

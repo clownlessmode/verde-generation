@@ -12,10 +12,10 @@ export default function Home() {
     <main className="flex flex-col gap-20 justify-center items-center">
       <Hero />
       <Company />
-      <AboutUs />
-      <Activities />
-      <Projects />
-      <News />
+      {/* <AboutUs /> */}
+      {/* <Activities /> */}
+      {/* <Projects /> */}
+      {/* <News /> */}
     </main>
   );
 }
