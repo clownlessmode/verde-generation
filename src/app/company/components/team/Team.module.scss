@@ -4,6 +4,25 @@
   gap: 28px;
   width: 1280px;
 
+  .Teams {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  h1 {
+    font-size: 48px;
+    font-weight: 600;
+    color: #2e8b57;
+    line-height: 112%;
+  }
+
+  .team {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+  }
+
   .teamwrapper {
     display: flex;
     gap: 23.5px;
@@ -11,36 +30,35 @@
     flex-wrap: wrap;
 
     .teammember {
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-        width: 411px;
-        height: 553px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      width: 411px;
+      height: 553px;
     }
 
     .teammembertext {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
 
-        h1 {
-            font-size: 36px;
-            font-weight: 600;
-            color: #2E8B57;
-            line-height: 112%;
-        }
+      h2 {
+        font-size: 36px;
+        font-weight: 600;
+        color: #2e8b57;
+        line-height: 112%;
+      }
 
-        p {
-            font-size: 20px;
-            font-weight: 500;
-            opacity: 0.5;
-        }
+      p {
+        font-size: 20px;
+        font-weight: 500;
+        opacity: 0.5;
+      }
 
-        .line {
-            border: 1px solid black;
-            opacity: 0.2;
-        }
+      .line {
+        border: 1px solid black;
+        opacity: 0.2;
+      }
     }
   }
-  
 }
