@@ -58,7 +58,7 @@ const Advantages = () => {
             height={640}
             width={909}
           />
-          Текст redox.
+          <p>Текст redox.</p>
         </TabsContent>
         <TabsContent value="lpg" className={css.tabsContent}>
           <Image

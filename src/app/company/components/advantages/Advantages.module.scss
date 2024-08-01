@@ -15,5 +15,10 @@
     text-wrap: wrap;
     text-align: left;
     line-height: 32px;
+    transition: all ease 0.3s;
+  }
+
+  .Trigger:hover {
+    scale: 1.02;
   }
 }
