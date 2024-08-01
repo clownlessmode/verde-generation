@@ -1,6 +1,7 @@
 import React from "react";
 import css from "./Contacts.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const Contacts = () => {
   return (
@@ -11,7 +12,7 @@ const Contacts = () => {
           src="https://yandex.ru/map-widget/v1/?um=constructor%3A6912e1170c87e01de27e5609638ae5cbdc0f5393569f4d0b8108ab3977d94c37&amp;source=constructor"
           width="807"
           height="372"
-          frameborder="0"
+          frameBorder="0"
         ></iframe>
         <div className={css.addressblock}>
           <div className={css.address}>
@@ -24,13 +25,13 @@ const Contacts = () => {
           <div className={css.contacts}>
             <h2>Контакты</h2>
             <div className={css.links}>
-              <a href="#">info@verdeg.com</a>
-              <a href="#">+7 (3466) 49-42-03</a>
+              <Link href="#">info@verdeg.com</Link>
+              <Link href="#">+7 (3466) 49-42-03</Link>
             </div>
           </div>
           <div className={css.socialmedia}>
             <h2>Соц. Сети</h2>
-            <a href="#">
+            <Link href="#">
               <Image
                 alt=""
                 src="/assets/contacts/air.svg"
@@ -38,7 +39,7 @@ const Contacts = () => {
                 width={24}
               />{" "}
               info@verdeg.com
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import { ConvexClientProvider } from "@/lib/ConvexClientProvider";
 
 const inter = Manrope({ subsets: ["latin"] });
 
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     "сутки",
     "добыча",
     "проект",
-    "баррелей"
+    "баррелей",
   ],
 };
 
@@ -42,7 +43,7 @@ export default function RootLayout({
     <html lang="ru">
       <body className={inter.className}>
         <Header />
-        {children}
+        <ConvexClientProvider>{children}</ConvexClientProvider>
         <Footer />
       </body>
     </html>
