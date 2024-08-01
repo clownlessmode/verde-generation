@@ -160,7 +160,7 @@ export function Projects() {
                       width={640}
                       height={396}
                     />
-                    {item.title === "Volga Gas" && (
+                    {item.title === "Volga Gas" && item.dates && (
                       <div className={css.dates}>
                         {item.dates.map((date, index) => (
                           <div className={css.date} key={index}>
