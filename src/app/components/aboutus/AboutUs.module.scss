@@ -1,6 +1,8 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  max-width: 1280px;
+  width: 100%;
 
   .header {
     font-size: 48px;
@@ -21,7 +23,7 @@
     justify-content: space-between;
 
     .imageWrapper {
-      position: relative;
+      display: flex;
       width: 100%;
       max-width: 629px;
       height: auto;
@@ -92,90 +94,65 @@
 }
 
 @media screen and (max-width: 1350px) {
-  .content {
-    padding: 0px 20px;
-
-    .alltext {
-      gap: 24px;
-
-      .text {
-        gap: 36px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1250px) {
-  .content {
-    gap: 56px;
-
-    .imageWrapper {
-      max-width: 529px;
-    }
-
-    .alltext {
-      gap: 50px;
-
-      .text {
-        gap: 40px;
-
-        h2 {
-          font-size: 36px;
-        }
-
-        p {
-          font-size: 18px;
-        }
-      }
-
-      .activity {
-        h3 {
-          font-size: 20px;
-        }
-
-        ul {
-          font-size: 18px;
-          gap: 20px;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1150px) {
-  .content .alltext {
-    gap: 25px;
-  }
-}
-
-@media screen and (max-width: 1120px) {
   .wrapper {
-    align-items: center;
+    padding: 0px 20px;
+    .content {
+      flex-direction: column;
+      .imageWrapper {
+        max-width: 1280px;
+        max-height: 300px;
+        object-fit: cover;
+        width: 100%;
+      }
+      .alltext {
+        .activity {
+          justify-content: center;
+          ul {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+          }
+        }
+      }
 
+      .alltext {
+        max-width: 1280px;
+      }
+
+      h2 {
+        display: none;
+      }
+    }
     .header {
       display: flex;
     }
+  }
+}
 
+@media screen and (max-width: 800px) {
+  .wrapper {
     .content {
       flex-direction: column;
+      gap: 34px;
 
       .alltext {
         .text {
-          h2 {
-            display: none;
+          p {
+            font-size: 16px;
+          }
+        }
+        .activity {
+          h3 {
+            font-size: 16px;
+          }
+          ul {
+            li {
+              font-size: 16px;
+            }
           }
         }
       }
     }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .wrapper {
-    .imageWrapper {
-      max-width: 100%;
-    }
-
     .header {
       font-size: 36px;
     }

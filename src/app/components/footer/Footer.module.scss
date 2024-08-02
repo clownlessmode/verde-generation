@@ -4,7 +4,8 @@
   padding-top: 64px;
   padding-bottom: 40px;
   div {
-    width: 1280px;
+    max-width: 1280px;
+    width: 100%;
     display: flex;
     gap: 60px;
     p {
@@ -13,3 +14,4 @@
     }
   }
 }
+

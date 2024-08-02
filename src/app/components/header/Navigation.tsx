@@ -5,88 +5,74 @@ import css from "./Navigation.module.scss";
 import { ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { useQuery } from "convex/react";
+import { api } from "../../../../convex/_generated/api";
+
 interface HeaderItem {
   title: string;
   href: string;
   items?: HeaderItem[];
 }
-const HeaderItems: HeaderItem[] = [
-  {
-    title: "Главная",
-    href: "/",
-  },
-  {
-    title: "Проекты",
-    href: "Title",
-    items: [
-      {
-        title: "VolgaGas",
-        href: "/projects/volgagas",
-      },
-      {
-        title: "ТПГК",
-        href: "/projects/tpgk",
-      },
-      {
-        title: "Урал Газ",
-        href: "/projects/uralgaz",
-      },
-      {
-        title: "Ульяновск/Пенза",
-        href: "/projects/ulyanovskpenza",
-      },
-      {
-        title: "Узбекистан",
-        href: "/projects/uzbekistan",
-      },
-    ],
-  },
-  {
-    title: "О компании",
-    href: "/company/",
-    items: [
-      {
-        title: "О нас",
-        href: "/company/aboutus",
-      },
-      {
-        title: "История",
-        href: "/company/history",
-      },
 
-      {
-        title: "Команда",
-        href: "/company/team",
-      },
+interface Project {
+  _id: string;
+  title: string;
+  description: string;
+  mainImage: string;
+  subImage: string;
+  dates?: {
+    timestart: string;
+    timeend: string;
+    compnames: string;
+    names: string;
+  }[];
+  stats: {
+    title: string;
+    value: string;
+  }[];
+}
 
-      {
-        title: "Преимущества",
-        href: "/company/advantages",
-      },
-    ],
-  },
-  {
-    title: "Пресс Центр",
-    href: "Title",
-    items: [
-      {
-        title: "Новости",
-        href: "News",
-      },
-      {
-        title: "Фотогалерея",
-        href: "Gallery",
-      },
-    ],
-  },
-  {
-    title: "Контакты",
-    href: "/contacts",
-  },
-];
 const Navigation = () => {
+  const projects = useQuery(api.projects.listProjects);
   const pathname = usePathname();
-  console.log(pathname);
+
+  const HeaderItems: HeaderItem[] = [
+    {
+      title: "Главная",
+      href: "/",
+    },
+    {
+      title: "Проекты",
+      href: "Title",
+      items: projects?.map((project) => ({
+        title: project.title,
+        href: `/projects/${project._id}`,
+      })) || [],
+    },
+    {
+      title: "О компании",
+      href: "/company/",
+      items: [
+        { title: "О нас", href: "/company/aboutus" },
+        { title: "История", href: "/company/history" },
+        { title: "Команда", href: "/company/team" },
+        { title: "Преимущества", href: "/company/advantages" },
+      ],
+    },
+    {
+      title: "Пресс Центр",
+      href: "Title",
+      items: [
+        { title: "Новости", href: "News" },
+        { title: "Фотогалерея", href: "Gallery" },
+      ],
+    },
+    {
+      title: "Контакты",
+      href: "/contacts",
+    },
+  ];
+
   return (
     <div className={css.wrapper}>
       {HeaderItems.map((item, index) => (

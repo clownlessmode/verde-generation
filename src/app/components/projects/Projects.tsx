@@ -28,6 +28,7 @@ interface Stats {
 }
 
 interface Project {
+  _id: string;
   title: string;
   description: string;
   mainImage: string;
@@ -45,7 +46,7 @@ export async function Projects() {
           {projects.map((item, index) => (
             <CarouselItem key={index}>
               <Link
-                href={transliterate(item.title)}
+                href={`/projects/${item._id}`}
                 className={css.sides}
                 key={index}
               >

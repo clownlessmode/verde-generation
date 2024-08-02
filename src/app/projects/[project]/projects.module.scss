@@ -1,0 +1,123 @@
+.wrapper {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  gap: 60px;
+}
+
+
+
+.wrapperProject {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    gap: 20px;
+    .sides {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      gap: 22px;
+      .side {
+        max-width: 50%;
+        width: 100%;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        gap: 54px;
+        .header {
+          flex-direction: column;
+          gap: 24px;
+          width: 100%;
+          h2 {
+            font-size: 48px;
+            font-weight: 600;
+            color: #2e8b57;
+          }
+          p {
+            font-size: 20px;
+            line-height: 158%;
+            max-width: 500px;
+          }
+        }
+  
+        .aboutProjectHeader {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          img {
+            max-height: 360px;
+            object-fit: cover;
+          }
+          .dates {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            .date {
+              max-width: 220px;
+              font-size: 20px;
+  
+              time {
+                color: #2e8b57;
+              }
+            }
+          }
+        }
+      }
+      .stats {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .statsItem {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 20px;
+          h3 {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .arrows {
+      display: flex;
+      flex-direction: row;
+    }
+    .separator {
+      width: 100%;
+      height: 1px;
+      background: #000;
+      opacity: 50%;
+    }
+  }
+  
+  @media screen and (max-width: 1400px) {
+    .wrapper {
+      .arrows {
+        display: none;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .wrapper {
+      .sides {
+        flex-direction: column;
+      }
+    }
+  }
+  
+  
+  
+  
+  
+  

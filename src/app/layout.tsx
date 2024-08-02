@@ -43,11 +43,11 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={inter.className}>
-        <Header />
         <ConvexClientProvider>
+          <Header />
           <EdgeStoreProvider>{children}</EdgeStoreProvider>
+          <Footer />
         </ConvexClientProvider>
-        <Footer />
       </body>
     </html>
   );
