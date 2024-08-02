@@ -61,10 +61,10 @@ const Navigation = () => {
     },
     {
       title: "Пресс Центр",
-      href: "Title",
+      href: "/press-centre/",
       items: [
-        { title: "Новости", href: "News" },
-        { title: "Фотогалерея", href: "Gallery" },
+        { title: "Новости", href: "/press-centre/news" },
+        { title: "Фотогалерея", href: "/press-centre/gallery" },
       ],
     },
     {
