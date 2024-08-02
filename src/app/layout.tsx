@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import { ConvexClientProvider } from "@/lib/ConvexClientProvider";
+import { EdgeStoreProvider } from "@/lib/edgestore";
 
 const inter = Manrope({ subsets: ["latin"] });
 
@@ -43,7 +44,9 @@ export default function RootLayout({
     <html lang="ru">
       <body className={inter.className}>
         <Header />
-        <ConvexClientProvider>{children}</ConvexClientProvider>
+        <ConvexClientProvider>
+          <EdgeStoreProvider>{children}</EdgeStoreProvider>
+        </ConvexClientProvider>
         <Footer />
       </body>
     </html>
