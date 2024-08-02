@@ -22,9 +22,10 @@ const Header = () => {
           height={37}
         />
       </Link>
+      
       <nav className={css.mainNav}>
         <Navigation />
-        <Link href={"/"}>
+        <Link href={"tel:+73466494203"}>
           <Button>Связаться с нами</Button>
         </Link>
       </nav>

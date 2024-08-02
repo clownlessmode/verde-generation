@@ -8,9 +8,9 @@ const Hero = () => {
     <section className={css.wrapper}>
       <h1>Verde: Комплексный Подход к Разработке Нефтегазовых Месторождений</h1>
       <div>
-        <Link href="contacts">
+        <Link href={"tel:+73466494203"}>
         <Button variant={"secondary"}>Связаться с нами</Button></Link>
-        <Link href="#company">
+        <Link href="/company/aboutus">
           <Image alt="" src="/assets/hero/arrow.svg" width={24} height={24} />
           <p>Узнать больше</p>
         </Link>

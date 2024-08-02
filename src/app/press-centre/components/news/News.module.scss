@@ -1,0 +1,47 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 1280px;
+  width: 100%;
+  .newsitems {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 21px;
+    .newsitem {
+      display: flex;
+      flex-direction: column;
+      max-width: 303px;
+      width: 100%;
+      gap: 18px;
+      padding: 16px;
+      .imageWrapper {
+        height: 374px;
+        width: 281px;
+        background-repeat: no-repeat;
+        background-image: url("/assets/press-centre/news/news-photo.png");
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .date {
+          padding-left: 15px;
+          padding-bottom: 12px;
+          opacity: 0.5;
+          font-size: 20px;
+          color: white;
+        }
+      }
+    }
+    .newsdesc {
+      font-size: 20px;
+      font-weight: 500;
+    }
+    Button {
+      font-size: 11px;
+      max-width: 132px;
+      width: 100%;
+      gap: 10px;
+    }
+  }
+}

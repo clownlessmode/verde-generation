@@ -9,23 +9,82 @@ const News = () => {
   return (
     <section className={css.wrapper}>
       <Breadcrumb initial="Пресс-Центр" page="Новости" />
-      <div className={css.newsitem}>
-        <div className={css.imageWrapper}>
-          <Image
+      <div className={css.newsitems}>
+        <div className={css.newsitem}>
+          <div className={css.imageWrapper}>
+            {/* <Image
             alt=""
-            src="/assets/press-centre/news-photo.png"
+            src={"/assets/press-centre/news/news-photo.png"}
+            layout="absolute"
             width={281}
             height={374}
-          />
-          <p>Октябрь 2024</p>
+          /> */}
+            <p className={css.date}>Октябрь 2024</p>
+          </div>
+          <p className={css.newsdesc}>Зачем SHAMAN съел пёсика?</p>
+          <Button>
+            Подробнее
+            <ArrowUpRight size={16} />
+          </Button>
         </div>
-        <p className={css.newsdesc}>
-          SHAMAN СОБАЧКУ СКУУУУШАЛ ЗАЧЕМ ОН ТАК СДЕЛАЛ
-        </p>
-        <Button>
-          Подробнее
-          <ArrowUpRight size={16} />
-        </Button>
+        <div className={css.newsitem}>
+          <div className={css.imageWrapper}>
+            <p className={css.date}>Октябрь 2024</p>
+          </div>
+          <p className={css.newsdesc}>Зачем SHAMAN съел пёсика?</p>
+          <Button>
+            Подробнее
+            <ArrowUpRight size={16} />
+          </Button>
+        </div>
+        <div className={css.newsitem}>
+          <div className={css.imageWrapper}>
+            <p className={css.date}>Октябрь 2024</p>
+          </div>
+          <p className={css.newsdesc}>Зачем SHAMAN съел пёсика?</p>
+          <Button>
+            Подробнее
+            <ArrowUpRight size={16} />
+          </Button>
+        </div>
+        <div className={css.newsitem}>
+          <div className={css.imageWrapper}>
+            <p className={css.date}>Октябрь 2024</p>
+          </div>
+          <p className={css.newsdesc}>Зачем SHAMAN съел пёсика?</p>
+          <Button>
+            Подробнее
+            <ArrowUpRight size={16} />
+          </Button>
+        </div>
+        <div className={css.newsitem}>
+          <div className={css.imageWrapper}>
+            {/* <Image
+            alt=""
+            src={"/assets/press-centre/news/news-photo.png"}
+            layout="absolute"
+            width={281}
+            height={374}
+          /> */}
+            <p className={css.date}>Октябрь 2024</p>
+          </div>
+          <p className={css.newsdesc}>Зачем SHAMAN съел пёсика?</p>
+          <Button>
+            Подробнее
+            <ArrowUpRight size={16} />
+          </Button>
+        </div>
+        <div className={css.newsitem}>
+          <div className={css.imageWrapper}>
+            <p className={css.date}>Октябрь 2024</p>
+          </div>
+          <p className={css.newsdesc}>Зачем SHAMAN съел пёсика?</p>
+          <Button>
+            Подробнее
+            <ArrowUpRight size={16} />
+          </Button>
+        </div>
+        
       </div>
     </section>
   );

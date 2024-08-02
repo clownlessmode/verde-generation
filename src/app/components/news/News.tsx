@@ -49,9 +49,11 @@ const News = () => {
     <div className={css.wrapper}>
       <div className={css.header}>
         <h2>Последние новости</h2>
-        <Button className="gap-[10px]">
-          Смотреть все новости <ArrowUpRight size={16} />
-        </Button>
+        <Link href="/press-centre/news">
+          <Button className="gap-[10px]">
+            Смотреть все новости <ArrowUpRight size={16} />
+          </Button>
+        </Link>
       </div>
       <Carousel>
         <CarouselContent>
@@ -80,7 +82,7 @@ const News = () => {
           ))}
         </CarouselContent>
         <CarouselPrevious className={cn("bg-[#2e8b57]", css.arrows)} />
-        <CarouselNext className={(cn("bg-[#2e8b57]"), css.arrows)} />
+        <CarouselNext className={cn("bg-[#2e8b57]", css.arrows)} />
       </Carousel>
     </div>
   );

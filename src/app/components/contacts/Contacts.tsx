@@ -1,11 +1,17 @@
+"use client";
+
 import React from "react";
 import css from "./Contacts.module.scss";
 import Image from "next/image";
-import Link from "next/link";
+import dynamic from "next/dynamic";
+import { ToastContainer } from "react-toastify";
+
+const ContactsLink = dynamic(() => import("./ContactsLink"), { ssr: false });
 
 const Contacts = () => {
   return (
     <section className={css.wrapper}>
+      <ToastContainer />
       <h1>Контакты</h1>
       <div className={css.content}>
         <iframe
@@ -18,20 +24,23 @@ const Contacts = () => {
           <div className={css.address}>
             <h2>Адрес</h2>
             <p>
-              123112, город Москва, Пресненская наб., дом 12, этаж 35, пом. №
-              7/35
+              123112, город Москва, Пресненская наб., дом 12, этаж 35, пом. № 7/35
             </p>
           </div>
           <div className={css.contacts}>
             <h2>Контакты</h2>
             <div className={css.links}>
-              <Link href="#">info@verdeg.com</Link>
-              <Link href="#">+7 (3466) 49-42-03</Link>
+              <ContactsLink text="info@verdeg.com" scheme="mailto">
+                info@verdeg.com
+              </ContactsLink>
+              <ContactsLink text="+73466494203" scheme="tel">
+                +7 (3466) 49-42-03
+              </ContactsLink>
             </div>
           </div>
           <div className={css.socialmedia}>
             <h2>Соц. Сети</h2>
-            <Link href="#">
+            <ContactsLink text="info@verdeg.com" scheme="mailto">
               <Image
                 alt=""
                 src="/assets/contacts/air.svg"
@@ -39,7 +48,7 @@ const Contacts = () => {
                 width={24}
               />
               info@verdeg.com
-            </Link>
+            </ContactsLink>
           </div>
         </div>
       </div>
