@@ -19,7 +19,7 @@ const Company = () => {
               <h3>О нас</h3>
             </div>
           </AccordionTrigger>
-          <AccordionContent className="text-[20px] leading-[158%] pl-[225px]">
+          <AccordionContent className={css.content}>
             ООО «КНГК-ИНПЗ» (Ильинский НПЗ) - Современный производственный
             комплекс, входящий в число ведущих нефтеперерабатывающих заводов ЮФО
           </AccordionContent>
@@ -31,7 +31,7 @@ const Company = () => {
               <h3>История</h3>
             </div>
           </AccordionTrigger>
-          <AccordionContent className="text-[20px] leading-[158%] pl-[225px]">
+          <AccordionContent className={css.content}>
             ООО «КНГК-ИНПЗ» (Ильинский НПЗ) - Современный производственный
             комплекс, входящий в число ведущих нефтеперерабатывающих заводов ЮФО
           </AccordionContent>
@@ -43,7 +43,7 @@ const Company = () => {
               <h3>Перспективы развития</h3>
             </div>
           </AccordionTrigger>
-          <AccordionContent className="text-[20px] leading-[158%] pl-[225px]">
+          <AccordionContent className={css.content}>
             sadsadasdas
           </AccordionContent>
         </AccordionItem>

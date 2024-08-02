@@ -37,7 +37,7 @@ const Contacts = () => {
                 src="/assets/contacts/air.svg"
                 height={24}
                 width={24}
-              />{" "}
+              />
               info@verdeg.com
             </Link>
           </div>

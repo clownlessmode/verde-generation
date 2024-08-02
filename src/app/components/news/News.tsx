@@ -10,6 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 interface News {
   title: string;
@@ -78,8 +79,8 @@ const News = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="bg-[#2e8b57]" />
-        <CarouselNext className="bg-[#2e8b57]" />
+        <CarouselPrevious className={cn("bg-[#2e8b57]", css.arrows)} />
+        <CarouselNext className={(cn("bg-[#2e8b57]"), css.arrows)} />
       </Carousel>
     </div>
   );
