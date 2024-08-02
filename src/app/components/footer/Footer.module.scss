@@ -9,9 +9,48 @@
     display: flex;
     gap: 60px;
     p {
-        font-size: 20px;
-        font-weight: 500;
+      font-size: 20px;
+      font-weight: 500;
     }
   }
 }
 
+@media screen and (max-width: 1350px) {
+  .wrapper {
+    div {
+      gap: 30px;
+      padding-left: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .wrapper {
+    div {
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .wrapper {
+    div {
+      gap: 10px;
+      p {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 403px) {
+  .wrapper {
+    div {
+      p {
+        font-size: 8px;
+      }
+    }
+  }
+}

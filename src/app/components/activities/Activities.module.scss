@@ -14,7 +14,8 @@
 
   .allactivities {
     display: flex;
-    justify-content: space-between;
+    gap: 58px;
+    justify-content: center;
     max-width: 1280px;
     width: 100%;
 
@@ -22,6 +23,7 @@
       display: flex;
       flex-direction: column;
       gap: 11px;
+      text-align: left;
     }
     .one {
       max-width: 243px;
@@ -56,4 +58,65 @@
   font-weight: 500;
   color: #000;
   opacity: 0.5;
+}
+
+@media screen and (max-width: 1350px) {
+  .wrapper {
+    padding: 0px 20px;
+    .allactivities {
+      gap: 38px;
+    }
+  }
+
+  .activityhead {
+    font-size: 24px;
+  }
+
+  .activitydesc {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .wrapper {
+    padding: 0px 20px;
+    .allactivities {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .activity {
+        text-align: center;
+      }
+    }
+  }
+  .activityhead {
+    font-size: 32px;
+    font-weight: 600;
+    color: #2e8b57;
+  }
+
+  .activitydesc {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    h2 {
+      font-size: 36px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    h2 {
+      font-size: 32px;
+      text-align: center;
+    }
+  }
 }
