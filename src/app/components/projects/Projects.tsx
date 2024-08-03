@@ -10,10 +10,8 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import Link from "next/link";
-import { transliterate } from "@/lib/translicate";
-import { useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
-import { http } from "@/lib/ConvexClientProvider";
+
 
 interface Dates {
   timestart: string;

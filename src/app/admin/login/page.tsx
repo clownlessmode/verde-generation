@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useRouter } from "next/navigation";
-import { cookies } from "next/headers";
+
 
 export default function AdminLogin() {
   const [email, setEmail] = useState("");
@@ -20,10 +20,10 @@ export default function AdminLogin() {
       email === "verde_admin_email@gmail.com" &&
       password === "verde_admin_password"
     ) {
-      cookies().set("admin", "true", {
-        secure: process.env.NODE_ENV === "production", // Устанавливаем secure в production
-        maxAge: 60 * 60 * 24 * 7, // Время жизни куки (7 дней)
-      });
+    //   cookies().set("admin", "true", {
+    //     secure: process.env.NODE_ENV === "production", // Устанавливаем secure в production
+    //     maxAge: 60 * 60 * 24 * 7, // Время жизни куки (7 дней)
+    //   });
       router.push("/admin/dashboard");
     } else {
       alert("Неправильные значения");
