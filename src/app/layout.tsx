@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
 import { ConvexClientProvider } from "@/lib/ConvexClientProvider";
-import { EdgeStoreProvider } from "@/lib/edgestore";
+import ClientWrapper from './components/clientwrapper/ClientWrapper';
 
 const inter = Manrope({ subsets: ["latin"] });
 
@@ -44,9 +42,7 @@ export default function RootLayout({
     <html lang="ru">
       <body className={inter.className}>
         <ConvexClientProvider>
-          <Header />
-          <EdgeStoreProvider>{children}</EdgeStoreProvider>
-          <Footer />
+          <ClientWrapper>{children}</ClientWrapper>
         </ConvexClientProvider>
       </body>
     </html>

@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import css from "./Header.module.scss";
 import Image from "next/image";
@@ -47,13 +46,6 @@ const Header = () => {
             <Button variant={"ghost"} onClick={() => setIsOpen(!isOpen)}>
               <X color={"#008080"} />
             </Button>
-            <p>SHAMAN</p>
-            <p>VAPE</p>
-            <p>SHOP</p>
-            <p>LOSTMARY</p>
-            <p>по 350р</p>
-            <p>успей</p>
-            <p>Menu</p>
           </div>
         )}
       </nav>
