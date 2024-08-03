@@ -89,13 +89,12 @@
   }
 }
 
-// @media screen and (max-width: 1400px) {
-//   .wrapper {
-//     .arrows {
-//       display: none;
-//     }
-//   }
-// }
+@media screen and (max-width: 1400px) {
+  .wrapper {
+    padding: 0px 20px;
+    
+  }
+}
 
 @media screen and (max-width: 1000px) {
   .wrapper {

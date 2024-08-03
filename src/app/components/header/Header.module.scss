@@ -7,38 +7,114 @@
   position: fixed;
   width: 100%;
   left: 0px;
-
   z-index: 1;
   backdrop-filter: blur(10px);
+
   .mainNav {
     display: flex;
     align-items: center;
     flex-direction: row;
     gap: 32px;
   }
+
   .burger {
     display: none;
     position: relative;
   }
+
   .burgerMenu {
     z-index: 2;
-    // transform: translateX(-1000px);
     height: 100vh;
-    top: -12px;
-    width: 350px;
-    right: -100px;
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    color: black;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    .gradientOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.85) 45%,
+        rgba(0, 128, 128, 0.85) 100%
+      );
+      z-index: -1;
+    }
+
+    .closeButton {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .burgerLinks,
+    .subMenu {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      a {
+        font-size: 1.2rem;
+        color: black;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+
+      a:hover {
+        color: #008080;
+        scale: 1.05;
+        font-weight: 600;
+      }
+    }
+
+    .backButton {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .subMenuTitle {
+      font-size: 36px;
+      font-weight: bold;
+      color: #008080;
+    }
+
+    .menuItem {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      a {
+        font-size: 1.2rem;
+        color: black;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      a:hover {
+        color: #008080;
+        scale: 1.05;
+        font-weight: 600;
+      }
+    }
   }
+
   a {
     transition: all ease 0.3s;
   }
+
   a:hover {
     scale: 1.05;
   }

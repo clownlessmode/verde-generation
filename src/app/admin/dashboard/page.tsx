@@ -66,7 +66,7 @@ export default function Dashboard() {
               <TabsList>
                 <TabsTrigger value="projects">Проекты</TabsTrigger>
                 <TabsTrigger value="news">Новости</TabsTrigger>
-                <TabsTrigger value="gallery">Фотогаллерея</TabsTrigger>
+                <TabsTrigger value="gallery">Фотогалерея</TabsTrigger>
               </TabsList>
             </div>
             <TabsContent value="projects">
