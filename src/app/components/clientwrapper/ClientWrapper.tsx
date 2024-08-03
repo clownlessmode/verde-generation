@@ -13,7 +13,7 @@ const ContentWrapper = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     if (!isAnimating) {
-      const timer = setTimeout(() => setShouldRender(true), 50); // Match this duration with your animation
+      const timer = setTimeout(() => setShouldRender(true), 1000); // Match this duration with your animation
       return () => clearTimeout(timer);
     } else {
       setShouldRender(false);
