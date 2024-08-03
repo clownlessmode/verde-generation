@@ -49,8 +49,8 @@ const Gallery = () => {
       <Breadcrumb initial="Пресс-Центр" page="Фотогалерея" />
       <div className={css.content}>
         <h1>Наше производство</h1>
-        <Carousel>
-          <CarouselContent className={css.carousel}>
+        <Carousel className={css.carousel}>
+          <CarouselContent>
             {NewsItems.map((item, index) => (
               <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={index}>
                 <Link href={"#"} className={css.itemWrapper}>
@@ -75,14 +75,16 @@ const Gallery = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className={cn("bg-[#2e8b57]", css.arrows)} />
-          <CarouselNext className={cn("bg-[#2e8b57]", css.arrows)} />
+          <div className={css.arrows}>
+            <CarouselPrevious className={cn("bg-[#2e8b57]")} />
+            <CarouselNext className={cn("bg-[#2e8b57]")} />
+          </div>
         </Carousel>
       </div>
       <div className={css.content}>
         <h1>Наша жизнь</h1>
-        <Carousel>
-          <CarouselContent className={css.carousel}>
+        <Carousel className={css.carousel}>
+          <CarouselContent>
             {NewsItems.map((item, index) => (
               <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={index}>
                 <Link href={"#"} className={css.itemWrapper}>
@@ -107,14 +109,16 @@ const Gallery = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className={cn("bg-[#2e8b57]", css.arrows)} />
-          <CarouselNext className={cn("bg-[#2e8b57]", css.arrows)} />
+          <div className={css.arrows}>
+            <CarouselPrevious className={cn("bg-[#2e8b57]")} />
+            <CarouselNext className={cn("bg-[#2e8b57]")} />
+          </div>
         </Carousel>
       </div>
       <div className={css.content}>
         <h1>Наши проекты</h1>
-        <Carousel>
-          <CarouselContent className={css.carousel}>
+        <Carousel className={css.carousel}>
+          <CarouselContent>
             {NewsItems.map((item, index) => (
               <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={index}>
                 <Link href={"#"} className={css.itemWrapper}>
@@ -139,8 +143,10 @@ const Gallery = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className={cn("bg-[#2e8b57]", css.arrows)} />
-          <CarouselNext className={cn("bg-[#2e8b57]", css.arrows)} />
+          <div className={css.arrows}>
+            <CarouselPrevious className={cn("bg-[#2e8b57]")} />
+            <CarouselNext className={cn("bg-[#2e8b57]")} />
+          </div>
         </Carousel>
       </div>
     </section>

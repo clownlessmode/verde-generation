@@ -12,13 +12,7 @@ const News = () => {
       <div className={css.newsitems}>
         <div className={css.newsitem}>
           <div className={css.imageWrapper}>
-            {/* <Image
-            alt=""
-            src={"/assets/press-centre/news/news-photo.png"}
-            layout="absolute"
-            width={281}
-            height={374}
-          /> */}
+            
             <p className={css.date}>Октябрь 2024</p>
           </div>
           <p className={css.newsdesc}>Зачем SHAMAN съел пёсика?</p>
@@ -59,13 +53,7 @@ const News = () => {
         </div>
         <div className={css.newsitem}>
           <div className={css.imageWrapper}>
-            {/* <Image
-            alt=""
-            src={"/assets/press-centre/news/news-photo.png"}
-            layout="absolute"
-            width={281}
-            height={374}
-          /> */}
+            
             <p className={css.date}>Октябрь 2024</p>
           </div>
           <p className={css.newsdesc}>Зачем SHAMAN съел пёсика?</p>

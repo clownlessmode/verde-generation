@@ -4,10 +4,13 @@
   gap: 28px;
   max-width: 1280px;
   width: 100%;
+  height: fit-content;
   .newsitems {
     display: flex;
     flex-wrap: wrap;
     gap: 21px;
+    overflow: hidden;
+
     .newsitem {
       display: flex;
       flex-direction: column;
@@ -16,10 +19,13 @@
       gap: 18px;
       padding: 16px;
       .imageWrapper {
-        height: 374px;
-        width: 281px;
+        max-height: 374px;
+        max-width: 281px;
+        height: 100%;
+        width: 100%;
         background-repeat: no-repeat;
         background-image: url("/assets/press-centre/news/news-photo.png");
+        object-fit: contain;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -42,6 +48,18 @@
       max-width: 132px;
       width: 100%;
       gap: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .wrapper {
+    Breadcrumb {
+      padding: 0 20px;
+      
+    }
+    .newsitems {
+      padding: 0 20px;
     }
   }
 }

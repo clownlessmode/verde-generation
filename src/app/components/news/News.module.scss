@@ -5,6 +5,7 @@
 
   width: 100%;
   max-width: 1280px;
+
   .header {
     display: flex;
     flex-direction: row;
@@ -51,13 +52,41 @@
     }
   }
 }
+
 @media screen and (max-width: 1400px) {
   .wrapper {
-    button {
-      display: none;
+    padding: 0px 20px;
+
+    .itemWrapper {
+      .item {
+        object-fit: cover;
+      }
     }
-    .arrows {
-      display: none;
+  }
+
+  .carousel {
+    position: relative;
+  }
+
+  .arrows {
+    position: absolute;
+    bottom: -60px; // ниже карусели
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    button {
+      position: static; // отменяем абсолютное позиционирование кнопок
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    .header {
+      h2 {
+        font-size: 36px;
+      }
     }
   }
 }

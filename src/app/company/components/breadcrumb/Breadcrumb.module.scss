@@ -10,3 +10,12 @@
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  .wrapperBreadcrumb {
+    .breadcrumb {
+      font-size: 16px !important;
+    }
+  }
+}
+

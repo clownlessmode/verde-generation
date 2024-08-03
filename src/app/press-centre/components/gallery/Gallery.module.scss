@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   gap: 64px;
+  max-width: 1280px;
+  width: 100%;
+
   .content {
     display: flex;
     flex-direction: column;
@@ -22,6 +25,7 @@
         rgba(0, 0, 0, 0) 0%,
         rgba(0, 0, 0, 1) 100%
       );
+      object-fit: contain;
       .title {
         padding: 24px;
         h3 {
@@ -37,9 +41,75 @@
         }
       }
     }
+
     h1 {
       font-size: 50px;
       font-weight: 600;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .wrapper {
+    padding: 0 20px;
+    gap: 54px;
+    .content {
+      h1 {
+        font-size: 40px;
+      }
+
+      .item {
+        height: 300px;
+      }
+
+      .carousel {
+        position: relative;
+
+        .arrows {
+          position: absolute;
+          bottom: -60px; // ниже карусели
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          gap: 10px;
+
+          button {
+            position: static; // отменяем абсолютное позиционирование кнопок
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    gap: 40px;
+    .content {
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .item {
+        height: 200px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    gap: 50px;
+    .content {
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .item {
+        height: 200px;
+      }
     }
   }
 }
