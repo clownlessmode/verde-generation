@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { Id } from "../../../../../../convex/_generated/dataModel";
+import React, { useState } from "react";
 import Image from "next/image";
 import { PlusCircle, Upload, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -24,10 +23,10 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Textarea } from "@/components/ui/textarea";
-import { fetchQuery } from "convex/nextjs";
-import { api } from "../../../../../../convex/_generated/api";
-import { useQuery, useMutation } from "convex/react";
+import { useMutation } from "convex/react";
 import { useEdgeStore } from "@/lib/edgestore";
+import { api } from "../../../../../convex/_generated/api";
+import { toast } from "react-toastify";
 
 interface Dates {
   timestart: string;
@@ -41,44 +40,16 @@ interface Stats {
   value: string;
 }
 
-interface Project {
-  _id: Id<"projects">;
-  title: string;
-  description: string;
-  mainImage: string;
-  subImage: string;
-  dates?: Dates[];
-  stats: Stats[];
-}
-
-const Page = ({ params }: { params: { projects: Id<"projects"> } }) => {
+const Page = () => {
   const [uploadProgress, setUploadProgress] = useState(0);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [mainImage, setMainImage] = useState("");
   const [subImage, setSubImage] = useState("");
-  const [stats, setStats] = useState<Stats[]>([]);
+  const [stats, setStats] = useState<Stats[]>([{ title: "", value: "" }]);
   const [isUploading, setIsUploading] = useState(false);
-  const projectData: Project = useQuery(api.projects.getProject, {
-    projectId: params.projects,
-  }) as Project;
-
-  const updateProject = useMutation(api.projects.updateProject);
+  const createProject = useMutation(api.projects.createProject);
   const { edgestore } = useEdgeStore();
-
-  useEffect(() => {
-    if (projectData) {
-      setTitle(projectData.title);
-      setDescription(projectData.description);
-      setMainImage(projectData.mainImage);
-      setSubImage(projectData.subImage);
-      setStats(projectData.stats || []);
-    }
-  }, [projectData]);
-
-  if (!projectData) {
-    return <div>Загрузка...</div>;
-  }
 
   const addStat = () => {
     setStats([...stats, { title: "", value: "" }]);
@@ -111,14 +82,14 @@ const Page = ({ params }: { params: { projects: Id<"projects"> } }) => {
   };
 
   const handleSave = async () => {
-    await updateProject({
-      id: params.projects,
+    await createProject({
       title,
       description,
       mainImage,
       subImage,
       stats,
     });
+    alert("Проект создан")
   };
 
   return (
@@ -129,10 +100,10 @@ const Page = ({ params }: { params: { projects: Id<"projects"> } }) => {
             <div className="flex items-center gap-4 justify-between">
               <div className="flex flex-row gap-4 items-center">
                 <h1 className="flex-1 shrink-0 whitespace-nowrap text-xl font-semibold tracking-tight sm:grow-0">
-                  {title}
+                  Новый проект
                 </h1>
                 <Badge variant="outline" className="ml-auto sm:ml-0">
-                  Редактирование
+                  Создание
                 </Badge>
               </div>
               <Button size="sm" onClick={handleSave}>

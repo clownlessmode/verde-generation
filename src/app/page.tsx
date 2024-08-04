@@ -14,7 +14,7 @@ export default function Home() {
       <Company />
       <AboutUs />
       <Activities />
-      {/* <Projects /> */}
+      <Projects />
       <News />
     </main>
   );

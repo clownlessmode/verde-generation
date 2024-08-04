@@ -23,5 +23,10 @@ export default defineSchema({
         value: v.string(),
       })
     ),
-  })
+  }),
+  news: defineTable({
+    title: v.string(),
+    image: v.string(),
+    main: v.string(),
+  }),
 });

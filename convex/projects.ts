@@ -60,16 +60,6 @@ export const updateProject = mutation({
     description: v.optional(v.string()),
     mainImage: v.optional(v.string()),
     subImage: v.optional(v.string()),
-    dates: v.optional(
-      v.array(
-        v.object({
-          timestart: v.string(),
-          timeend: v.string(),
-          compnames: v.string(),
-          names: v.string(),
-        })
-      )
-    ),
     stats: v.optional(
       v.array(
         v.object({
