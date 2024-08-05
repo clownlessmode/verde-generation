@@ -11,40 +11,40 @@ import {
 } from "@/components/ui/carousel";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-
+import { useQuery } from "convex/react";
+import { api } from "../../../../convex/_generated/api";
+import { Id } from "../../../../convex/_generated/dataModel";
+import { fetchQuery } from "convex/nextjs";
 interface News {
+  createdAt: number;
+  _id: Id<"news">;
+  _creationTime: number;
   title: string;
-  time: string;
+  image: string;
+  main: string;
 }
-
-const NewsItems: News[] = [
-  {
-    title: "Что то",
-    time: "Октябрь 2023",
-  },
-  {
-    title: "Что то",
-    time: "Октябрь 2023",
-  },
-  {
-    title: "Что то",
-    time: "Октябрь 2023",
-  },
-  {
-    title: "Что то",
-    time: "Октябрь 2023",
-  },
-  {
-    title: "Что то",
-    time: "Октябрь 2023",
-  },
-  {
-    title: "Что то",
-    time: "Октябрь 2023",
-  },
-];
-
-const News = () => {
+const formatDate = (dateString: number) => {
+  const date = new Date(dateString);
+  const monthNames = [
+    "Январь",
+    "Февраль",
+    "Март",
+    "Апрель",
+    "Май",
+    "Июнь",
+    "Июль",
+    "Август",
+    "Сентябрь",
+    "Октябрь",
+    "Ноябрь",
+    "Декабрь",
+  ];
+  const month = monthNames[date.getMonth()];
+  const year = date.getFullYear();
+  return `${month} ${year}`;
+};
+const News = async () => {
+  const NewsItems: News[] = await fetchQuery(api.news.listNews);
   return (
     <div className={css.wrapper}>
       <div className={css.header}>
@@ -65,7 +65,7 @@ const News = () => {
                   style={{
                     backgroundImage: `
                           linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%),
-                          url(/assets/aboutus/npz.jpg)
+                          url(${item.image})
                         `,
                     backgroundSize: "auto, cover",
                     backgroundPosition: "center, center",
@@ -74,7 +74,9 @@ const News = () => {
                 >
                   <div className={css.title}>
                     <h3>{item.title}</h3>
-                    <time dateTime={item.time}>{item.time}</time>
+                    <time dateTime={formatDate(item._creationTime)}>
+                      {formatDate(item._creationTime)}
+                    </time>
                   </div>
                 </div>
               </Link>
