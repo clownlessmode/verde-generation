@@ -3,157 +3,119 @@ import css from "./Team.module.scss";
 import Breadcrumb from "../breadcrumb/Breadcrumb";
 import Image from "next/image";
 
+interface Team {
+  office: string;
+  persons: Person[];
+}
+
+interface Person {
+  name: string;
+  position: string;
+  image: string;
+}
+
 const Textaboutus = () => {
+  const team: Team[] = [
+    {
+      office: "Офис Москва",
+      persons: [
+        {
+          image: "/assets/company/team/Зозуля Андрей Викторович, СЕО.jpg",
+          name: "Зозуля Андрей Викторович",
+          position: "СЕО",
+        },
+        {
+          image:
+            "/assets/company/team/Ким Надежда Александровна, Главный бухгалтер.jpg",
+          name: "Ким Надежда Александровна",
+          position: "Главный бухгалтер",
+        },
+
+        {
+          image:
+            "/assets/company/team/Вишняков Денис Александрович, Бизнес-ассистент.jpg",
+          name: "Вишняков Денис Александрович",
+          position: "Бизнес-ассистент",
+        },
+        {
+          image:
+            "/assets/company/team/Рубан Константин Юрьевич, Технический директор.jpg",
+          name: "Рубан Константин Юрьевич",
+          position: "Технический директор",
+        },
+        {
+          image:
+            "/assets/company/team/Карпухин Сергей Михайлович, Директор по геологоразведке.jpg",
+          name: "Карпухин Сергей Михайлович",
+          position: "Директор по геологоразведке",
+        },
+        {
+          image:
+            "/assets/company/team/Перфилова Юлия Владимировна, Главный специалист по лицензированию и геологоразведке.jpg",
+          name: "Перфилова Юлия Владимировна",
+          position: "Главный специалист по лицензированию и геологоразведке",
+        },
+        {
+          image:
+            "/assets/company/team/Поляков Михаил Сергеевич, Ведущий геолог.jpg",
+          name: "Поляков Михаил Сергеевич",
+          position: "Ведущий геолог",
+        },
+        {
+          image:
+            "/assets/company/team/Осокин Степан Артемович, Ведущий аналитик данных ГИС.jpg",
+          name: "Осокин Степан Артемович",
+          position: "Ведущий аналитик данных ГИС",
+        },
+        {
+          image:
+            "/assets/company/team/Гаврилов Иван Петрович, Коммерческий директор.jpg",
+          name: "Гаврилов Иван Петрович",
+          position: "Коммерческий директор",
+        },
+        {
+          image:
+            "/assets/company/team/Чернявский Виктор Павлович, Ведущий инженер по бурению.jpg",
+          name: "Чернявский Виктор Павлович",
+          position: "Ведущий инженер по бурению",
+        },
+        {
+          image:
+            "/assets/company/team/Плотников Богдан Сергеевич, Ведущий геофизик.jpg",
+          name: "Плотников Богдан Сергеевич",
+          position: "Ведущий геофизик",
+        },
+      ],
+    },
+  ];
+
   return (
     <section className={css.wrapper}>
       <Breadcrumb initial="О компании" page="Команда" />
       <div className={css.Teams}>
-        <div className={css.team}>
-          <h1>Офис Москва</h1>
-          <div className={css.teamwrapper}>
-            <div className={css.teammember}>
-              <Image
-                alt=""
-                src={"/assets/company/team/team.png"}
-                height={411}
-                width={411}
-              />
-              <div className={css.teammembertext}>
-                <h2>Зозуля Андрей Викторович </h2>
-                <p>СЕО</p>
-                <div className={css.line} />
-              </div>
-            </div>
-            <div className={css.teammember}>
-              <Image
-                alt=""
-                src={"/assets/company/team/team.png"}
-                height={411}
-                width={411}
-              />
-              <div className={css.teammembertext}>
-                <h2>Ким Надежда Александровна </h2>
-                <p>Финансовый директор</p>
-                <div className={css.line} />
-              </div>
-            </div>
-            <div className={css.teammember}>
-              <Image
-                alt=""
-                src={"/assets/company/team/team.png"}
-                height={411}
-                width={411}
-              />
-              <div className={css.teammembertext}>
-                <h2>Вишняков Денис Александрович</h2>
-                <p>Бизнес-ассистент</p>
-                <div className={css.line} />
-              </div>
-            </div>
-            <div className={css.teammember}>
-              <Image
-                alt=""
-                src={"/assets/company/team/team.png"}
-                height={411}
-                width={411}
-              />
-              <div className={css.teammembertext}>
-                <h2>Рубан Константин Юрьевич </h2>
-                <p>Технический директор</p>
-                <div className={css.line} />
-              </div>
+        {team.map((item, index) => (
+          <div className={css.team} key={index}>
+            <h1>{item.office}</h1>
+            <div className={css.teamwrapper}>
+              {item.persons.map((item, index) => (
+                <div className={css.teammember} key={index}>
+                  <Image
+                    alt=""
+                    src={item.image}
+                    height={411}
+                    width={411}
+                    className="max-h-[411px] object-cover max-w-[411px]"
+                  />
+                  <div className={css.teammembertext}>
+                    <h2>{item.name}</h2>
+                    <p>{item.position}</p>
+                    <div className={css.line} />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-        <div className={css.team}>
-          <h1>Офис Саратов</h1>
-          <div className={css.teamwrapper}>
-            <div className={css.teammember}>
-              <Image
-                alt=""
-                src={"/assets/company/team/team.png"}
-                height={411}
-                width={411}
-              />
-              <div className={css.teammembertext}>
-                <h2>Новый Айфончик Тонировкович</h2>
-                <p>Президент ООО «Попперс»</p>
-                <div className={css.line} />
-              </div>
-            </div>
-            <div className={css.teammember}>
-              <Image
-                alt=""
-                src={"/assets/company/team/team.png"}
-                height={411}
-                width={411}
-              />
-              <div className={css.teammembertext}>
-                <h2>Новый Айфончик Тонировкович</h2>
-                <p>Президент ООО «Попперс»</p>
-                <div className={css.line} />
-              </div>
-            </div>
-            <div className={css.teammember}>
-              <Image
-                alt=""
-                src={"/assets/company/team/team.png"}
-                height={411}
-                width={411}
-              />
-              <div className={css.teammembertext}>
-                <h2>Новый Айфончик Тонировкович</h2>
-                <p>Президент ООО «Попперс»</p>
-                <div className={css.line} />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={css.team}>
-          <h1>Офис Инта</h1>
-          <div className={css.teamwrapper}>
-            <div className={css.teammember}>
-              <Image
-                alt=""
-                src={"/assets/company/team/team.png"}
-                height={411}
-                width={411}
-              />
-              <div className={css.teammembertext}>
-                <h2>Новый Айфончик Тонировкович</h2>
-                <p>Президент ООО «Попперс»</p>
-                <div className={css.line} />
-              </div>
-            </div>
-            <div className={css.teammember}>
-              <Image
-                alt=""
-                src={"/assets/company/team/team.png"}
-                height={411}
-                width={411}
-              />
-              <div className={css.teammembertext}>
-                <h2>Новый Айфончик Тонировкович</h2>
-                <p>Президент ООО «Попперс»</p>
-                <div className={css.line} />
-              </div>
-            </div>
-            <div className={css.teammember}>
-              <Image
-                alt=""
-                src={"/assets/company/team/team.png"}
-                height={411}
-                width={411}
-              />
-              <div className={css.teammembertext}>
-                <h2>Новый Айфончик Тонировкович</h2>
-                <p>Президент ООО «Попперс»</p>
-                <div className={css.line} />
-              </div>
-            </div>
-          </div>
-        </div>
-        
+        ))}
       </div>
     </section>
   );

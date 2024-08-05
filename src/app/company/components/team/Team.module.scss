@@ -25,8 +25,10 @@
 
   .teamwrapper {
     display: flex;
-    row-gap: 43.5px;
-    justify-content: space-between;
+    gap: 10px;
+    row-gap: 80px;
+    justify-content: flex-start;
+
     flex-wrap: wrap;
 
     .teammember {
@@ -53,11 +55,12 @@
         font-size: 20px;
         font-weight: 500;
         opacity: 0.5;
+    
       }
 
       .line {
         border: 1px solid black;
-        opacity: 0.2;
+        opacity: 0.02;
       }
     }
   }
