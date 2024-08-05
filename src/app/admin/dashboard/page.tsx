@@ -50,15 +50,15 @@ export default function Dashboard() {
   const news = useQuery(api.news.listNews);
   const photos = useQuery(api.photogallery.listGalleryItems);
 
-  // const router = useRouter();
+  const router = useRouter();
 
-  // useEffect(() => {
-  //   const adminCookie = Cookies.get("admin");
+  useEffect(() => {
+    const adminCookie = Cookies.get("admin");
 
-  //   if (!adminCookie) {
-  //     router.push("/admin/login");
-  //   }
-  // }, [router]);
+    if (!adminCookie) {
+      router.push("/admin/login");
+    }
+  }, [router]);
   const Delete = useMutation(api.projects.deleteProject);
   const DeleteNews = useMutation(api.news.deleteNews);
   const DeletePhoto = useMutation(api.photogallery.deleteGalleryItem);

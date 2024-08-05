@@ -38,11 +38,11 @@ export default function AdminLogin() {
           </div>
           <form onSubmit={handleSubmit} className="grid gap-4">
             <div className="grid gap-2">
-              <Label htmlFor="email">Электронная почта</Label>
+              <Label htmlFor="email">Логин</Label>
               <Input
                 id="email"
-                type="email"
-                placeholder="m@example.com"
+                type="text"
+                placeholder="login"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
