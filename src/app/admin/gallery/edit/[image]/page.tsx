@@ -11,38 +11,31 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useMutation, useQuery } from "convex/react";
 import { useEdgeStore } from "@/lib/edgestore";
-import "react-markdown-editor-lite/lib/index.css";
-import ReactMarkdown from "react-markdown";
 import { Id } from "../../../../../../convex/_generated/dataModel";
 import { api } from "../../../../../../convex/_generated/api";
 import Link from "next/link";
 
-// Dynamically import the Markdown editor
-const MdEditor = dynamic(() => import("react-markdown-editor-lite"), {
-  ssr: false,
-});
-
-const EditNewsPage = ({ params }: { params: { news: Id<"news"> } }) => {
+const EditGalleryPage = ({ params }: { params: { image: Id<"gallery"> } }) => {
   const [uploadProgress, setUploadProgress] = useState(0);
-  const [title, setTitle] = useState("");
-  const [main, setMain] = useState("");
+  const [type, setType] = useState<"life" | "production" | undefined>(
+    undefined
+  );
   const [image, setImage] = useState("");
   const [isUploading, setIsUploading] = useState(false);
-  const updateNews = useMutation(api.news.updateNews);
+  const updateGallery = useMutation(api.photogallery.updateGalleryItem);
   const { edgestore } = useEdgeStore();
 
-  // Fetch the existing news details
-  const news = useQuery(api.news.getNewsById, {
-    id: params.news,
+  // Fetch the existing gallery details
+  const gallery = useQuery(api.photogallery.getGalleryItemById, {
+    id: params.image,
   });
 
   useEffect(() => {
-    if (news) {
-      setTitle(news.title);
-      setMain(news.main);
-      setImage(news.image);
+    if (gallery) {
+      setType(gallery.type as "life" | "production");
+      setImage(gallery.image);
     }
-  }, [news]);
+  }, [gallery]);
 
   const handleImageUpload = async (
     event: React.ChangeEvent<HTMLInputElement>,
@@ -65,31 +58,26 @@ const EditNewsPage = ({ params }: { params: { news: Id<"news"> } }) => {
   };
 
   const handleSave = async () => {
-    await updateNews({
-      id: params.news,
-      title,
+    await updateGallery({
+      id: params.image,
+      type,
       image,
-      main,
     });
-    alert("Новость обновлена");
-  };
-
-  const handleEditorChange = ({ text }: { text: string }) => {
-    setMain(text);
+    alert("Фотография обновлена");
   };
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40 pt-20">
       <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
         <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
-          <div className="mx-auto grid max-w-[59rem] flex-1 auto-rows-max gap-4">
+          <div className="mx-auto grid max-w-[1280px] flex-1 auto-rows-max gap-4">
             <div className="flex items-center gap-4 justify-between">
               <div className="flex flex-row gap-4 items-center">
                 <Link href={"/admin/dashboard"}>
                   <Button size="sm">Вернуться назад</Button>
                 </Link>
                 <h1 className="flex-1 shrink-0 whitespace-nowrap text-xl font-semibold tracking-tight sm:grow-0">
-                  Редактирование новости
+                  Редактирование фотографии
                 </h1>
                 <Badge variant="outline" className="ml-auto sm:ml-0">
                   Редактирование
@@ -99,53 +87,39 @@ const EditNewsPage = ({ params }: { params: { news: Id<"news"> } }) => {
                 Сохранить
               </Button>
             </div>
-            <div className="grid gap-4 md:grid-cols-[1fr_250px] lg:grid-cols-3 lg:gap-8">
-              <div className="grid auto-rows-max items-start gap-4 lg:col-span-2 lg:gap-8">
-                <Card x-chunk="dashboard-07-chunk-0">
+            <div className="flex gap-4">
+              <div className="max-w-[250px]">
+                <Card x-chunk="dashboard-07-chunk-0" className="max-w-[250px]">
                   <CardHeader>
                     <CardTitle>Основные</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="grid gap-6">
                       <div className="grid gap-3">
-                        <Label htmlFor="title">Заголовок</Label>
-                        <Input
-                          id="title"
-                          type="text"
-                          className="w-full"
-                          value={title}
-                          onChange={(e) => setTitle(e.target.value)}
-                        />
-                      </div>
-                      <div className="grid gap-3">
-                        <Label htmlFor="main">Новость</Label>
-                        <MdEditor
-                          value={main}
-                          style={{ height: "500px", maxWidth: "590px" }}
-                          renderHTML={(text) => (
-                            <ReactMarkdown>{text}</ReactMarkdown>
-                          )}
-                          onChange={handleEditorChange}
-                          config={{
-                            view: {
-                              menu: true,
-                              md: true,
-                              html: true,
-                            },
-                          }}
-                        />
+                        <Label htmlFor="type">Тип</Label>
+                        <select
+                          id="type"
+                          className="w-full p-2 border rounded-md"
+                          value={type}
+                          onChange={(e) =>
+                            setType(e.target.value as "life" | "production")
+                          }
+                        >
+                          <option value="life">Life</option>
+                          <option value="production">Production</option>
+                        </select>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
               </div>
-              <div className="grid auto-rows-max items-start gap-4 lg:gap-8">
+              <div className="flex-grow">
                 <Card
                   className="overflow-hidden"
                   x-chunk="dashboard-07-chunk-4"
                 >
                   <CardHeader>
-                    <CardTitle>Фото новости</CardTitle>
+                    <CardTitle>Фото</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="grid gap-2">
@@ -154,16 +128,16 @@ const EditNewsPage = ({ params }: { params: { news: Id<"news"> } }) => {
                         role="button"
                       >
                         <Image
-                          alt="News image"
-                          className="aspect-square w-full rounded-md object-cover"
-                          height="300"
+                          alt="Gallery image"
+                          className="aspect-square rounded-md object-cover h-[700px] w-[700px]"
+                          height="700"
                           src={image || "/placeholder.svg"}
-                          width="300"
+                          width="700"
                         />
                         <Upload className="h-4 w-4 text-muted-foreground absolute" />
                         <Input
                           type="file"
-                          className="absolute inset-0 opacity-0 cursor-pointer h-300"
+                          className="absolute inset-0 opacity-0 cursor-pointer h-[700px] w-[700px]"
                           onChange={(e) => handleImageUpload(e, setImage)}
                         />
                       </div>
@@ -187,4 +161,4 @@ const EditNewsPage = ({ params }: { params: { news: Id<"news"> } }) => {
   );
 };
 
-export default EditNewsPage;
+export default EditGalleryPage;

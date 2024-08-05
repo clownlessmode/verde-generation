@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { Id } from "../../../../../convex/_generated/dataModel";
 
 interface News {
   title: string;
@@ -42,8 +43,70 @@ const NewsItems: News[] = [
     time: "Октябрь 2023",
   },
 ];
+type GalleryData = {
+  _id: Id<"gallery">;
+  _creationTime: number;
+  image: string;
+  type: "life" | "production";
+};
 
-const Gallery = () => {
+interface Dates {
+  timestart: string;
+  timeend: string;
+  compnames: string;
+  names: string;
+}
+
+interface Stats {
+  title: string;
+  value: string;
+}
+
+interface Project {
+  _id: Id<"projects">;
+  _creationTime: number;
+
+  title: string;
+  description: string;
+  mainImage: string;
+  subImage: string;
+  dates?: Dates[];
+  stats: Stats[];
+}
+
+type Props = {
+  galleryData: GalleryData[];
+  projects: Project[];
+};
+const formatDate = (dateString: number) => {
+  const date = new Date(dateString);
+  const monthNames = [
+    "Январь",
+    "Февраль",
+    "Март",
+    "Апрель",
+    "Май",
+    "Июнь",
+    "Июль",
+    "Август",
+    "Сентябрь",
+    "Октябрь",
+    "Ноябрь",
+    "Декабрь",
+  ];
+  const month = monthNames[date.getMonth()];
+  const year = date.getFullYear();
+  return `${month} ${year}`;
+};
+const separateGalleryItems = (items: GalleryData[]) => {
+  const lifeItems = items.filter((item) => item.type === "life");
+  const productionItems = items.filter((item) => item.type === "production");
+
+  return { lifeItems, productionItems };
+};
+const Gallery = ({ galleryData, projects }: Props) => {
+  const { lifeItems, productionItems } = separateGalleryItems(galleryData);
+
   return (
     <section className={css.wrapper}>
       <Breadcrumb initial="Пресс-Центр" page="Фотогалерея" />
@@ -51,7 +114,7 @@ const Gallery = () => {
         <h1>Наше производство</h1>
         <Carousel className={css.carousel}>
           <CarouselContent>
-            {NewsItems.map((item, index) => (
+            {productionItems.map((item, index) => (
               <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={index}>
                 <Link href={"#"} className={css.itemWrapper}>
                   <div
@@ -59,7 +122,7 @@ const Gallery = () => {
                     style={{
                       backgroundImage: `
                             linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%),
-                            url(/assets/aboutus/npz.jpg)
+                            url(${item.image})
                             `,
                       backgroundSize: "auto, cover",
                       backgroundPosition: "center, center",
@@ -67,8 +130,7 @@ const Gallery = () => {
                     }}
                   >
                     <div className={css.title}>
-                      <h3>{item.title}</h3>
-                      <time dateTime={item.time}>{item.time}</time>
+                      <time>{formatDate(item._creationTime)}</time>
                     </div>
                   </div>
                 </Link>
@@ -85,7 +147,7 @@ const Gallery = () => {
         <h1>Наша жизнь</h1>
         <Carousel className={css.carousel}>
           <CarouselContent>
-            {NewsItems.map((item, index) => (
+            {lifeItems.map((item, index) => (
               <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={index}>
                 <Link href={"#"} className={css.itemWrapper}>
                   <div
@@ -93,7 +155,7 @@ const Gallery = () => {
                     style={{
                       backgroundImage: `
                             linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%),
-                            url(/assets/aboutus/npz.jpg)
+                                        url(${item.image})
                             `,
                       backgroundSize: "auto, cover",
                       backgroundPosition: "center, center",
@@ -101,8 +163,7 @@ const Gallery = () => {
                     }}
                   >
                     <div className={css.title}>
-                      <h3>{item.title}</h3>
-                      <time dateTime={item.time}>{item.time}</time>
+                      <time>{formatDate(item._creationTime)}</time>
                     </div>
                   </div>
                 </Link>
@@ -119,7 +180,7 @@ const Gallery = () => {
         <h1>Наши проекты</h1>
         <Carousel className={css.carousel}>
           <CarouselContent>
-            {NewsItems.map((item, index) => (
+            {projects.map((item, index) => (
               <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={index}>
                 <Link href={"#"} className={css.itemWrapper}>
                   <div
@@ -136,7 +197,7 @@ const Gallery = () => {
                   >
                     <div className={css.title}>
                       <h3>{item.title}</h3>
-                      <time dateTime={item.time}>{item.time}</time>
+                      <time>{formatDate(item._creationTime)}</time>
                     </div>
                   </div>
                 </Link>

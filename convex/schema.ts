@@ -29,4 +29,8 @@ export default defineSchema({
     image: v.string(),
     main: v.string(),
   }),
+  gallery: defineTable({
+    type: v.union(v.literal("life"), v.literal("production")),
+    image: v.string(),
+  }),
 });

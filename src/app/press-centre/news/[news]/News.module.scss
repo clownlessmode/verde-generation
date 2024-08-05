@@ -1,0 +1,43 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 1280px;
+  margin: 0 auto;
+  h1 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 112%;
+    text-align: justify;
+    span {
+      color: #2e8b57;
+    }
+  }
+
+  p,
+  ul {
+    font-size: 20px;
+    line-height: 119.3%;
+    font-weight: 500;
+    list-style: none;
+  }
+
+  ul {
+    padding-top: 15px;
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    opacity: 0.5;
+    gap: 15px;
+    align-items: center;
+  }
+}
+
+.circle {
+  width: 4px;
+  height: 4px;
+  background: #000;
+  border-radius: 100%;
+}

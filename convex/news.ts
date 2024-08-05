@@ -23,7 +23,10 @@ export const createNews = mutation({
 export const listNews = query({
   handler: async (ctx) => {
     const news = await ctx.db.query("news").collect();
-    return news;
+    return news.map((item) => ({
+      ...item,
+      createdAt: item._creationTime, // включаем дату создания в возвращаемый результат
+    }));
   },
 });
 
@@ -60,12 +63,12 @@ export const deleteNews = mutation({
 
 // Get a news item by title
 export const getNewsById = query({
-    args: { id: v.id("news") },
-    handler: async (ctx, args) => {
-      const news = await ctx.db
-        .query("news")
-        .filter((q) => q.eq(q.field("_id"), args.id))
-        .first();
-      return news;
-    },
-  });
+  args: { id: v.id("news") },
+  handler: async (ctx, args) => {
+    const news = await ctx.db
+      .query("news")
+      .filter((q) => q.eq(q.field("_id"), args.id))
+      .first();
+    return news;
+  },
+});

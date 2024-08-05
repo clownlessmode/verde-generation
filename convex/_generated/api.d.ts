@@ -15,6 +15,7 @@ import type {
   FunctionReference,
 } from "convex/server";
 import type * as news from "../news.js";
+import type * as photogallery from "../photogallery.js";
 import type * as projects from "../projects.js";
 
 /**
@@ -27,6 +28,7 @@ import type * as projects from "../projects.js";
  */
 declare const fullApi: ApiFromModules<{
   news: typeof news;
+  photogallery: typeof photogallery;
   projects: typeof projects;
 }>;
 export declare const api: FilterApi<

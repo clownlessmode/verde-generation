@@ -14,6 +14,7 @@ import { useEdgeStore } from "@/lib/edgestore";
 import { api } from "../../../../../convex/_generated/api";
 import "react-markdown-editor-lite/lib/index.css";
 import ReactMarkdown from "react-markdown";
+import Link from "next/link";
 
 // Dynamically import the Markdown editor
 const MdEditor = dynamic(() => import("react-markdown-editor-lite"), {
@@ -73,6 +74,9 @@ const Page = () => {
           <div className="mx-auto grid max-w-[59rem] flex-1 auto-rows-max gap-4">
             <div className="flex items-center gap-4 justify-between">
               <div className="flex flex-row gap-4 items-center">
+                <Link href={"/admin/dashboard"}>
+                  <Button size="sm">Вернуться назад</Button>
+                </Link>
                 <h1 className="flex-1 shrink-0 whitespace-nowrap text-xl font-semibold tracking-tight sm:grow-0">
                   Добавление новости
                 </h1>
@@ -106,7 +110,7 @@ const Page = () => {
                         <Label htmlFor="main">Новость</Label>
                         <MdEditor
                           value={main}
-                          style={{ height: "500px" }}
+                          style={{ height: "500px", maxWidth: "590px" }}
                           renderHTML={(text) => (
                             <ReactMarkdown>{text}</ReactMarkdown>
                           )}

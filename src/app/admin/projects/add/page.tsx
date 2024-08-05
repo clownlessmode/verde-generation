@@ -27,6 +27,7 @@ import { useMutation } from "convex/react";
 import { useEdgeStore } from "@/lib/edgestore";
 import { api } from "../../../../../convex/_generated/api";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 interface Dates {
   timestart: string;
@@ -89,7 +90,7 @@ const Page = () => {
       subImage,
       stats,
     });
-    alert("Проект создан")
+    alert("Проект создан");
   };
 
   return (
@@ -99,6 +100,9 @@ const Page = () => {
           <div className="mx-auto grid max-w-[59rem] flex-1 auto-rows-max gap-4">
             <div className="flex items-center gap-4 justify-between">
               <div className="flex flex-row gap-4 items-center">
+                <Link href={"/admin/dashboard"}>
+                  <Button size="sm">Вернуться назад</Button>
+                </Link>
                 <h1 className="flex-1 shrink-0 whitespace-nowrap text-xl font-semibold tracking-tight sm:grow-0">
                   Новый проект
                 </h1>

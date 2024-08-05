@@ -28,6 +28,7 @@ import { fetchQuery } from "convex/nextjs";
 import { api } from "../../../../../../convex/_generated/api";
 import { useQuery, useMutation } from "convex/react";
 import { useEdgeStore } from "@/lib/edgestore";
+import Link from "next/link";
 
 interface Dates {
   timestart: string;
@@ -97,7 +98,7 @@ const Page = ({ params }: { params: { projects: Id<"projects"> } }) => {
     const file = event.target.files?.[0];
     if (file) {
       setIsUploading(true);
-      setUploadProgress(0); // Reset progress to 0 before starting the upload
+      setUploadProgress(0); 
       const res = await edgestore.publicFiles.upload({
         file,
         onProgressChange: (progress) => {
@@ -128,6 +129,9 @@ const Page = ({ params }: { params: { projects: Id<"projects"> } }) => {
           <div className="mx-auto grid max-w-[59rem] flex-1 auto-rows-max gap-4">
             <div className="flex items-center gap-4 justify-between">
               <div className="flex flex-row gap-4 items-center">
+                <Link href={"/admin/dashboard"}>
+                  <Button size="sm">Вернуться назад</Button>
+                </Link>
                 <h1 className="flex-1 shrink-0 whitespace-nowrap text-xl font-semibold tracking-tight sm:grow-0">
                   {title}
                 </h1>
