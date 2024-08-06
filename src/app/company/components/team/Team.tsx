@@ -2,6 +2,7 @@ import React from "react";
 import css from "./Team.module.scss";
 import Breadcrumb from "../breadcrumb/Breadcrumb";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 interface Team {
   office: string;
@@ -104,7 +105,7 @@ const Textaboutus = () => {
                     src={item.image}
                     height={411}
                     width={411}
-                    className="max-h-[411px] object-cover max-w-[411px]"
+                    className={cn("max-h-[590px] object-cover max-w-[411px]", css.teamimage)}
                   />
                   <div className={css.teammembertext}>
                     <h2>{item.name}</h2>

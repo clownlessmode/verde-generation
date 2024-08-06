@@ -11,6 +11,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    a {
+      .button {
+        gap: 10px
+      }
+    }
     h2 {
       font-size: 48px;
       font-weight: 600;
@@ -86,6 +91,18 @@
     .header {
       h2 {
         font-size: 36px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 673px) {
+  .wrapper {
+    .header {
+      justify-content: center;
+      text-align: center;
+      a {
+        display: none;
       }
     }
   }
