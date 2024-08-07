@@ -7,117 +7,156 @@
   gap: 60px;
 }
 
-
-
 .wrapperProject {
-    width: 100%;
-    max-width: 1280px;
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  gap: 20px;
+
+  .sides {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    overflow: hidden;
-    gap: 20px;
-    .sides {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
+    width: 100%;
+    gap: 22px;
+
+    .side {
+      max-width: 50%;
       width: 100%;
-      gap: 22px;
-      .side {
-        max-width: 50%;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      gap: 54px;
+
+      .header {
+        flex-direction: column;
+        gap: 24px;
         width: 100%;
-        color: black;
+
+        h2 {
+          font-size: 48px;
+          font-weight: 600;
+          color: #2e8b57;
+        }
+
+        p {
+          font-size: 20px;
+          line-height: 158%;
+          max-width: 600px;
+          text-align: justify;
+        }
+      }
+
+      .aboutProjectHeader {
         display: flex;
         flex-direction: column;
-        gap: 54px;
-        .header {
-          flex-direction: column;
-          gap: 24px;
-          width: 100%;
-          h2 {
-            font-size: 48px;
-            font-weight: 600;
-            color: #2e8b57;
-          }
-          p {
-            font-size: 20px;
-            line-height: 158%;
-            max-width: 500px;
-          }
+        gap: 12px;
+
+        img {
+          max-height: 360px;
+          object-fit: cover;
         }
-  
-        .aboutProjectHeader {
+
+        .dates {
           display: flex;
-          flex-direction: column;
-          gap: 12px;
-          img {
-            max-height: 360px;
-            object-fit: cover;
-          }
-          .dates {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 100%;
-            .date {
-              max-width: 220px;
-              font-size: 20px;
-  
-              time {
-                color: #2e8b57;
-              }
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+
+          .date {
+            max-width: 220px;
+            font-size: 20px;
+
+            time {
+              color: #2e8b57;
             }
           }
         }
       }
-      .stats {
+    }
+
+    .stats {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .statsItem {
         display: flex;
-        flex-direction: column;
-        gap: 8px;
-        .statsItem {
-          display: flex;
-          flex-direction: row;
-          width: 100%;
-          justify-content: space-between;
-          align-items: center;
-          font-size: 20px;
-          h3 {
-            font-weight: 600;
-          }
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+
+        h3 {
+          font-weight: 600;
         }
       }
     }
+  }
+
+  .separator {
+    width: 100%;
+    height: 1px;
+    background: #000;
+    opacity: 50%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .wrapper {
+    padding: 0px 20px;
+
     .arrows {
-      display: flex;
-      flex-direction: row;
-    }
-    .separator {
-      width: 100%;
-      height: 1px;
-      background: #000;
-      opacity: 50%;
+      display: none;
     }
   }
-  
-  @media screen and (max-width: 1400px) {
-    .wrapper {
-      .arrows {
-        display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapperProject {
+    .sides {
+      align-items: center;
+      flex-direction: column;
+
+      .side {
+        .header {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+
+          p {
+            text-align: justify;
+            max-width: 1280px;
+            width: 100%;
+          }
+        }
+
+        max-width: 100%;
+        gap: 14px;
+
+        .mainImage {
+          max-width: 1280px;
+          height: 300px;
+          object-fit: cover;
+          width: 100%;
+        }
+
+        .subImage {
+          display: none;
+        }
       }
     }
   }
-  
-  @media screen and (max-width: 1000px) {
-    .wrapper {
-      .sides {
-        flex-direction: column;
-      }
-    }
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    gap: 20px;
   }
-  
-  
-  
-  
-  
-  
+}

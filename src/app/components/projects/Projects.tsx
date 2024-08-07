@@ -12,7 +12,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { api } from "../../../../convex/_generated/api";
 
-
 interface Dates {
   timestart: string;
   timeend: string;
@@ -39,7 +38,7 @@ export async function Projects() {
   const projects: Project[] = await fetchQuery(api.projects.listProjects);
   return (
     <section className={css.wrapper}>
-      <Carousel className="w-full max-w-[1280px]" orientation="horizontal">
+      <Carousel className="w-full max-w-[1280px] " orientation="horizontal">
         <CarouselContent>
           {projects.map((item, index) => (
             <CarouselItem key={index}>
@@ -53,7 +52,13 @@ export async function Projects() {
                     <h2>{item.title}</h2>
                     <p>{item.description}</p>
                   </div>
-                  <Image src={item.mainImage} alt="" width={629} height={601} />
+                  <Image
+                    src={item.mainImage}
+                    alt=""
+                    width={629}
+                    height={601}
+                    className={css.mainImage}
+                  />
                 </div>
                 <div className={css.side}>
                   <div className={css.aboutProjectHeader}>
@@ -62,6 +67,8 @@ export async function Projects() {
                       alt=""
                       width={640}
                       height={396}
+                      
+                      className={css.subImage}
                     />
                     {item.title === "Volga Gas" && item.dates && (
                       <div className={css.dates}>

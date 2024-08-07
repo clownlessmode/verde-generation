@@ -32,7 +32,8 @@
         p {
           font-size: 20px;
           line-height: 158%;
-          max-width: 500px;
+          max-width: 620px;
+          text-align: justify;
         }
       }
 
@@ -92,14 +93,53 @@
 @media screen and (max-width: 1400px) {
   .wrapper {
     padding: 0px 20px;
-    
+    .arrows {
+      position: absolute;
+      bottom: -75px; // ниже карусели
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      button {
+        position: static; // отменяем абсолютное позиционирование кнопок
+      }
+    }
   }
 }
 
 @media screen and (max-width: 1000px) {
   .wrapper {
     .sides {
+      align-items: center;
       flex-direction: column;
+      .side {
+        .header {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          p {
+            text-align: justify;
+            
+              
+              max-width: 1280px;
+              width: 100%;
+            
+          }
+        }
+        max-width: 100%;
+        gap: 14px;
+
+        .mainImage {
+          max-width: 1280px;
+          height: 300px;
+          object-fit: cover;
+          width: 100%;
+        }
+        .subImage {
+          display: none;
+        }
+      }
     }
   }
 }

@@ -101,8 +101,8 @@ const Page = () => {
                           <option value="" disabled>
                             Выберите тип
                           </option>
-                          <option value="life">Life</option>
-                          <option value="production">Production</option>
+                          <option value="life">Наша Жизнь</option>
+                          <option value="production">Наше производство</option>
                         </select>
                       </div>
                     </div>

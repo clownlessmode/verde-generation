@@ -10,9 +10,9 @@ const Advantages = () => {
       <Breadcrumb initial="О компании" page="Преимущества" />
       <Tabs
         defaultValue="slimdrill"
-        className="w-[1280px] flex flex-row justify-between"
+        className={css.tabs}
       >
-        <TabsList className="flex flex-columm items-start justify-left bg-inherit gap-[23px] text-[#000000] text-wrap">
+        <TabsList className={css.tabslist}>
           <TabsTrigger value="techs" className={css.Trigger}>
             Современное оборудование и технологии
           </TabsTrigger>
@@ -38,6 +38,7 @@ const Advantages = () => {
             src={"/assets/company/advantages/image.png"}
             height={640}
             width={909}
+            className={css.image}
           />
           <p>
             Наше новейшее оборудование и технологии повышают эффективность
@@ -51,6 +52,8 @@ const Advantages = () => {
             src={"/assets/company/advantages/image.png"}
             height={640}
             width={909}
+            className={css.image}
+
           />
           <p>
             Высококвалифицированные специалисты с опытом в бурении и ремонте
@@ -63,6 +66,8 @@ const Advantages = () => {
             src={"/assets/company/advantages/image.png"}
             height={640}
             width={909}
+            className={css.image}
+
           />
           <p>
             Используем технологии Slim Drill, что снижает затраты на бурение в
@@ -75,6 +80,8 @@ const Advantages = () => {
             src={"/assets/company/advantages/image.png"}
             height={640}
             width={909}
+            className={css.image}
+
           />
           <p>
             Процесс Redox эффективно очищает газ от H2S, снижая выбросы и
@@ -87,6 +94,8 @@ const Advantages = () => {
             src={"/assets/company/advantages/image.png"}
             height={640}
             width={909}
+            className={css.image}
+
           />
           <p>
             Наши проекты по конверсии факельного газа в LPG увеличивают КПД до
@@ -99,6 +108,8 @@ const Advantages = () => {
             src={"/assets/company/advantages/image.png"}
             height={640}
             width={909}
+            className={css.image}
+
           />
           <p>
             Использование искусственного интеллекта для управления производством

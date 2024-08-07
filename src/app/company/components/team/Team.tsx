@@ -86,6 +86,13 @@ const Textaboutus = () => {
           name: "Плотников Богдан Сергеевич",
           position: "Ведущий геофизик",
         },
+        {
+          image:
+            "/assets/company/team/Виктор Викторович Балаба, Руководитель службы буровых растворов и цементирования скважин.jpg",
+          name: "Балаба Виктор Викторович",
+          position:
+            "Руководитель службы буровых растворов и цементирования скважин",
+        },
       ],
     },
   ];
@@ -105,7 +112,10 @@ const Textaboutus = () => {
                     src={item.image}
                     height={411}
                     width={411}
-                    className={cn("max-h-[590px] object-cover max-w-[411px]", css.teamimage)}
+                    className={cn(
+                      "max-h-[590px] object-cover max-w-[411px]",
+                      css.teamimage
+                    )}
                   />
                   <div className={css.teammembertext}>
                     <h2>{item.name}</h2>

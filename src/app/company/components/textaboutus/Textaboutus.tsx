@@ -1,6 +1,7 @@
 import React from "react";
 import css from "./Textaboutus.module.scss";
 import Breadcrumb from "../breadcrumb/Breadcrumb";
+import Image from "next/image";
 
 const Textaboutus = () => {
   return (
@@ -38,6 +39,13 @@ const Textaboutus = () => {
           </li>
         </ul>
       </div>
+      <Image
+        alt=""
+        src={"/assets/company/aboutus/npz.png"}
+        height={894}
+        width={1280}
+        className={css.imageMain}
+      /> 
     </section>
   );
 };

@@ -47,6 +47,7 @@ const page = async ({ params }: { params: { project: Id<"projects"> } }) => {
               alt=""
               width={629}
               height={601}
+              className={css.mainImage}
             />
           </div>
           <div className={css.side}>
@@ -56,6 +57,8 @@ const page = async ({ params }: { params: { project: Id<"projects"> } }) => {
                 alt=""
                 width={640}
                 height={396}
+                className={css.subImage}
+
               />
               {projectData.title === "Volga Gas" && projectData.dates && (
                 <div className={css.dates}>

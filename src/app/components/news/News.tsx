@@ -50,7 +50,7 @@ const News = async () => {
       <div className={css.header}>
         <h2>Последние новости</h2>
         <Link href="/press-centre/news">
-          <Button className="gap-[10px]">
+          <Button className={css.button}>
             Смотреть все новости <ArrowUpRight size={16} />
           </Button>
         </Link>

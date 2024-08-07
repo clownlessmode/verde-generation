@@ -73,9 +73,9 @@ const Header = () => {
       <Link href={"/"}>
         <Image
           alt="Logotype Verde"
-          src={"/assets/header/Logotype.svg"}
-          width={260}
-          height={37}
+          src={"/assets/header/Logotype.png"}
+          width={150}
+          height={27}
         />
       </Link>
 

@@ -14,12 +14,12 @@ const Contacts = () => {
       <ToastContainer />
       <h1>Контакты</h1>
       <div className={css.content}>
-          <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3A6912e1170c87e01de27e5609638ae5cbdc0f5393569f4d0b8108ab3977d94c37&amp;source=constructor"
-            width="807"
-            height="372"
-            frameBorder="0"
-          ></iframe>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A6912e1170c87e01de27e5609638ae5cbdc0f5393569f4d0b8108ab3977d94c37&amp;source=constructor"
+          width="807"
+          height="372"
+          frameBorder="0"
+        ></iframe>
         <div className={css.addressblock}>
           <div className={css.address}>
             <h2>Адрес</h2>
@@ -33,10 +33,10 @@ const Contacts = () => {
               <h2>Контакты</h2>
               <div className={css.links}>
                 <ContactsLink text="info@verdeg.com" scheme="mailto">
-                  info@verdeg.com
+                  <p>info@verdeg.com</p>
                 </ContactsLink>
                 <ContactsLink text="+73466494203" scheme="tel">
-                  +7 (3466) 49-42-03
+                  <p>+7 (3466) 49-42-03</p>
                 </ContactsLink>
               </div>
             </div>
@@ -49,7 +49,7 @@ const Contacts = () => {
                   height={24}
                   width={24}
                 />
-                info@verdeg.com
+                <p>info@verdeg.com</p>
               </ContactsLink>
             </div>
           </div>

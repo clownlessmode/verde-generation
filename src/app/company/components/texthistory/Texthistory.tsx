@@ -1,6 +1,7 @@
 import React from "react";
 import css from "./Texthistory.module.scss";
 import Breadcrumb from "../breadcrumb/Breadcrumb";
+import Image from "next/image";
 
 const Textaboutus = () => {
   return (
@@ -10,9 +11,9 @@ const Textaboutus = () => {
         <h1>
           Компания <span>Verde</span> начала деятельность в 2015 году и с тех
           пор совершенствуется в сфере энергетики. Первый крупный проект
-          «VolgaGas» стал основой для успешного развития компании. После
-          «VolgaGas» команда «Verde» приступила к более амбициозным инициативам,
-          включая значимый проект «УралГаз», который укрепил её репутацию и
+          VolgaGas стал основой для успешного развития компании. После
+          VolgaGas команда Verde приступила к более амбициозным инициативам,
+          включая значимый проект УралГаз, который укрепил её репутацию и
           демонстрировал стабильный рост.
         </h1>
       </div>
@@ -30,6 +31,13 @@ const Textaboutus = () => {
           основу для дальнейшего роста.
         </p>
       </div>
+      <Image
+        alt=""
+        src={"/assets/company/aboutus/npz.png"}
+        height={894}
+        width={1280}
+        className={css.mainImage}
+      />
     </section>
   );
 };
