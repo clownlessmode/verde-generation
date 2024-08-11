@@ -43,7 +43,9 @@ export default function RootLayout({
     <html lang="ru">
       <body className={inter.className}>
         <ConvexClientProvider>
-          <ClientWrapper>{children}</ClientWrapper>
+          <ClientWrapper>
+            {children}
+          </ClientWrapper>
         </ConvexClientProvider>
       </body>
     </html>
