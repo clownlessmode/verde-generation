@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Navigation from "./Navigation";
-import { cn } from "@/lib/utils";
 import { AlignJustify, X, ChevronLeft } from "lucide-react";
 import { useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
@@ -15,7 +14,7 @@ interface HeaderItem {
   items?: HeaderItem[];
 }
 
-const Header = () => {
+const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [activeMenu, setActiveMenu] = useState<HeaderItem | null>(null);
 
@@ -86,21 +85,11 @@ const Header = () => {
 
       <nav className={css.burger}>
         <Button variant={"ghost"} onClick={handleBurgerClick}>
-          <AlignJustify
-            color={"#008080"}
-            style={isOpen ? { display: "none" } : { display: "block" }}
-          />
+          {isOpen ? <X color={"#008080"} /> : <AlignJustify color={"#008080"} />}
         </Button>
         {isOpen && (
           <div className={css.burgerMenu}>
             <div className={css.gradientOverlay}></div>
-            <Button
-              className={css.closeButton}
-              variant={"ghost"}
-              onClick={handleBurgerClick}
-            >
-              <X color={"#008080"} />
-            </Button>
             {activeMenu ? (
               <div className={css.subMenu}>
                 <Button

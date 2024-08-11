@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        xs: "385px", // Добавляем кастомный брейкпоинт для экранов шириной 400px и больше
+
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -35,6 +39,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

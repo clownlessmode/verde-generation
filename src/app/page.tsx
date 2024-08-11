@@ -7,7 +7,7 @@ import Map from "./components/map/Map";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-20 justify-center items-center">
+    <main className="flex flex-col gap-20 xs:gap-[45px] justify-center items-center">
       <Hero />
       <Company />
       <AboutUs />

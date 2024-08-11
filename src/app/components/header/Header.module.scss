@@ -7,7 +7,7 @@
   position: fixed;
   width: 100%;
   left: 0px;
-  z-index: 1;
+  z-index: 10;
   backdrop-filter: blur(10px);
 
   .mainNav {
@@ -23,7 +23,7 @@
   }
 
   .burgerMenu {
-    z-index: 2;
+    z-index: 1000;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -35,6 +35,7 @@
     left: 0;
     right: 0;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.95);
 
     .gradientOverlay {
       position: fixed;
@@ -72,7 +73,7 @@
 
       a:hover {
         color: #008080;
-        scale: 1.05;
+        transform: scale(1.05);
         font-weight: 600;
       }
     }
@@ -105,7 +106,7 @@
 
       a:hover {
         color: #008080;
-        scale: 1.05;
+        transform: scale(1.05);
         font-weight: 600;
       }
     }
@@ -116,17 +117,15 @@
   }
 
   a:hover {
-    scale: 1.05;
+    transform: scale(1.05);
   }
 }
 
 @media screen and (max-width: 1400px) {
   .wrapper {
     padding: 12px 20px;
-    flex-direction: row-reverse;
-    a {
-      display: none;
-    }
+    flex-direction: row;
+
     .mainNav {
       display: none;
     }
@@ -138,6 +137,14 @@
 
 @media screen and (max-width: 800px) {
   .wrapper {
-    padding: 12px 20px;
+    backdrop-filter: none; 
+    -webkit-backdrop-filter: none;
+    background-color: rgba(
+      255,
+      255,
+      255,
+      1
+    ); 
+    border-bottom: 4px solid #008080;
   }
 }

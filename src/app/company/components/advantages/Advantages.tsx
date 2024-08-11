@@ -95,7 +95,6 @@ const Advantages = () => {
             height={640}
             width={909}
             className={css.image}
-
           />
           <p>
             Наши проекты по конверсии факельного газа в LPG увеличивают КПД до

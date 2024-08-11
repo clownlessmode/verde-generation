@@ -3,11 +3,21 @@
   flex-direction: column;
   max-width: 1280px;
   width: 100%;
+  gap: 42px;
   padding: 0px 20px;
   .header {
     font-size: 48px;
     font-weight: 600;
     color: #2e8b57;
-    text-align: center;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper {
+    .header {
+      font-size: 32px;
+      text-align: center;
+    }
   }
 }

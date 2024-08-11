@@ -26,7 +26,7 @@ const Hero = () => {
       style={{
         backgroundImage: `url(${images[currentImage]})`,
         transition: "background-image 2s ease-in-out",
-        filter: currentImage === 1 ? "brightness(0.9)" : "none",
+        filter: currentImage === 1 ? "brightness(1)" : "none",
       }}
     >
       <h1>Комплексный Подход к Разработке Нефтегазовых Месторождений</h1>
