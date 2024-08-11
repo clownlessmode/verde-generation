@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import { ConvexClientProvider } from "@/lib/ConvexClientProvider";
-import ClientWrapper from './components/clientwrapper/ClientWrapper';
+import ClientWrapper from "./components/clientwrapper/ClientWrapper";
+import Script from "next/script";
 
 const inter = Manrope({ subsets: ["latin"] });
 

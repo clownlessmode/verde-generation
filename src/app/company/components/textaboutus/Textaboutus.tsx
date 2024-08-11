@@ -41,7 +41,7 @@ const Textaboutus = () => {
       </div>
       <Image
         alt=""
-        src={"/assets/company/aboutus/npz.png"}
+        src={"/assets/aboutus/aboutus.jpg"}
         height={894}
         width={1280}
         className={css.imageMain}

@@ -27,7 +27,7 @@ const PageTransition = () => {
     <div className={`${css.transitionOverlay} ${isAnimating ? css.active : ''}`}>
       <div className={css.logo}>
         <Image
-          src="/assets/pagetransition/Logotype.png"
+          src="/assets/pagetransition/Logotype.svg"
           alt=""
           layout="intrinsic"
           width={1000}

@@ -36,10 +36,11 @@ const Header = () => {
     },
     {
       title: "Проекты",
-      items: projects?.map((project) => ({
-        title: project.title,
-        href: `/projects/${project._id}`,
-      })) || [],
+      items:
+        projects?.map((project) => ({
+          title: project.title,
+          href: `/projects/${project._id}`,
+        })) || [],
     },
     {
       title: "О компании",
@@ -73,7 +74,7 @@ const Header = () => {
       <Link href={"/"}>
         <Image
           alt="Logotype Verde"
-          src={"/assets/header/Logotype.png"}
+          src={"/assets/header/Logotype.svg"}
           width={150}
           height={27}
         />
@@ -81,29 +82,41 @@ const Header = () => {
 
       <nav className={css.mainNav}>
         <Navigation />
-        <Link href={"tel:+73466494203"}>
-          <Button>Связаться с нами</Button>
-        </Link>
       </nav>
 
       <nav className={css.burger}>
         <Button variant={"ghost"} onClick={handleBurgerClick}>
-          <AlignJustify color={"#008080"} style={isOpen ? { display: "none" } : { display: "block" }} />
+          <AlignJustify
+            color={"#008080"}
+            style={isOpen ? { display: "none" } : { display: "block" }}
+          />
         </Button>
         {isOpen && (
           <div className={css.burgerMenu}>
             <div className={css.gradientOverlay}></div>
-            <Button className={css.closeButton} variant={"ghost"} onClick={handleBurgerClick}>
+            <Button
+              className={css.closeButton}
+              variant={"ghost"}
+              onClick={handleBurgerClick}
+            >
               <X color={"#008080"} />
             </Button>
             {activeMenu ? (
               <div className={css.subMenu}>
-                <Button className={css.backButton} variant={"ghost"} onClick={() => setActiveMenu(null)}>
+                <Button
+                  className={css.backButton}
+                  variant={"ghost"}
+                  onClick={() => setActiveMenu(null)}
+                >
                   <ChevronLeft color={"#008080"} />
                 </Button>
                 <h2 className={css.subMenuTitle}>{activeMenu.title}</h2>
                 {activeMenu.items?.map((subItem, index) => (
-                  <Link key={index} href={subItem.href || "#"} onClick={() => setIsOpen(false)}>
+                  <Link
+                    key={index}
+                    href={subItem.href || "#"}
+                    onClick={() => setIsOpen(false)}
+                  >
                     {subItem.title}
                   </Link>
                 ))}
@@ -115,13 +128,15 @@ const Header = () => {
               <div className={css.burgerLinks}>
                 <h2 className={css.subMenuTitle}>МЕНЮ</h2>
                 {HeaderItems.map((item, index) => (
-                  <div key={index} onClick={() => handleMenuClick(item)} className={css.menuItem}>
+                  <div
+                    key={index}
+                    onClick={() => handleMenuClick(item)}
+                    className={css.menuItem}
+                  >
                     {item.items ? (
                       <a>{item.title}</a>
                     ) : (
-                      <Link href={item.href || "#"}>
-                        {item.title}
-                      </Link>
+                      <Link href={item.href || "#"}>{item.title}</Link>
                     )}
                   </div>
                 ))}
