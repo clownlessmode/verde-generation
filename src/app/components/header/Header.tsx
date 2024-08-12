@@ -51,7 +51,7 @@ const Header: React.FC = () => {
       ],
     },
     {
-      title: "Пресс Центр",
+      title: "Пресс-Центр",
       items: [
         { title: "Новости", href: "/press-centre/news" },
         { title: "Фотогалерея", href: "/press-centre/gallery" },
@@ -76,6 +76,7 @@ const Header: React.FC = () => {
           src={"/assets/header/Logotype.svg"}
           width={150}
           height={27}
+          className={css.vaginoobrazny}
         />
       </Link>
 
@@ -121,7 +122,13 @@ const Header: React.FC = () => {
               </div>
             ) : (
               <div className={css.burgerLinks}>
-                <h2 className={css.subMenuTitle}>МЕНЮ</h2>
+                <Image
+                  alt=""
+                  src={"/assets/header/Logotype.svg"}
+                  width={150}
+                  height={27}
+                  className={css.penisoobraazniy}
+                />
                 {HeaderItems.map(
                   (item: HeaderItem, index: React.Key | null | undefined) => (
                     <div

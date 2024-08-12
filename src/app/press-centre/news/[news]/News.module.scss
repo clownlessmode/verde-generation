@@ -46,11 +46,14 @@
 @media screen and (max-width: 1350px) {
   .wrapper {
     padding: 0px 20px;
+
   }
 }
 
 @media screen and (max-width: 800px) {
   .wrapper {
+    padding: 0px 40px;
+
     h1 {
       font-size: 28px;
     }
