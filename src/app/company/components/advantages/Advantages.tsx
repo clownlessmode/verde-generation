@@ -8,32 +8,45 @@ import { Atom, Bot, CircuitBoard, Cog, Users, Webhook, X } from "lucide-react";
 interface advantagesItems {
   image: React.ReactNode;
   text: string;
+  description: string;
 }
 
 const advantagesItems: advantagesItems[] = [
   {
     image: <Cog color="#008080" size={200} />,
     text: "Cовременное оборудование и технологии",
+    description:
+      "Наше новейшее оборудование и технологии повышают эффективность работы и снижают воздействие на окружающую среду. Технология захвата и переработки факельного газа делает мир чище.",
   },
   {
     image: <Users color="#008080" size={200} />,
     text: "Специалисты высокого класса",
+    description:
+      "Высококвалифицированные специалисты с опытом в бурении и ремонте гарантируют высокое качество и соблюдение сроков.",
   },
   {
     image: <Webhook color="#008080" size={200} />,
     text: "Инновационные технологии бурения (Slim Drill)",
+    description:
+      "Используем технологии Slim Drill, что снижает затраты на бурение в 2-3 раза. Успешно пробурили 50 скважин.",
   },
   {
     image: <Atom color="#008080" size={200} />,
     text: "Эффективные процессы очистки газа (Redox)",
+    description:
+      "Процесс Redox эффективно очищает газ от H2S, снижая выбросы и энергопотребление при широких рабочих давлениях.",
   },
   {
     image: <CircuitBoard color="#008080" size={200} />,
     text: "Конверсия факельного газа в сжиженный газ (LPG)",
+    description:
+      "Наши проекты по конверсии факельного газа в LPG увеличивают КПД до 94%, окупая затраты менее чем за год.",
   },
   {
     image: <Bot color="#008080" size={200} />,
     text: "Внедрение искусственного интеллекта (AI Operator)",
+    description:
+      "Использование искусственного интеллекта для управления производством LPG повышает общую эффективность, контролируя десятки параметров одновременно.",
   },
 ];
 
@@ -45,7 +58,10 @@ const Advantages = () => {
         {advantagesItems.map((item, index) => (
           <div className={css.item} key={index}>
             {item.image}
-            <p>{item.text}</p>
+            <div className={css.text}>
+              <p className={css.header}>{item.text}</p>
+              <p>{item.description}</p>
+            </div>
           </div>
         ))}
       </div>
