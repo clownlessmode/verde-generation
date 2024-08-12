@@ -33,6 +33,7 @@
       gap: 54px;
 
       .header {
+          text-align: left;
         flex-direction: column;
         gap: 24px;
         width: 100%;
@@ -127,8 +128,8 @@
         .header {
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          text-align: center;
+          justify-content: flex-start;
+          text-align: left;
 
           p {
             text-align: left;
