@@ -113,7 +113,7 @@ const Textaboutus = () => {
                     height={411}
                     width={411}
                     className={cn(
-                      "max-h-[590px] object-cover max-w-[411px]",
+                      "max-h-[570px] object-cover max-w-[411px]",
                       css.teamimage
                     )}
                   />
