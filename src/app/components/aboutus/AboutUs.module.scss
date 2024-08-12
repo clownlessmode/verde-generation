@@ -95,7 +95,7 @@
 
 @media screen and (max-width: 1350px) {
   .wrapper {
-    padding: 0px 20px;
+    padding: 0px 40px;
     .content {
       flex-direction: column;
       .imageWrapper {
@@ -139,11 +139,13 @@
         .text {
           p {
             font-size: 16px;
+            text-align: left;
           }
         }
         .activity {
           h3 {
-            font-size: 16px;
+            font-size: 24px;
+            font-weight: 800;
           }
           ul {
             li {

@@ -79,21 +79,54 @@
 
 @media screen and (max-width: 850px) {
   .wrapper {
-    padding: 0px 20px;
+    padding: 0px 40px;
+    h2 {
+      font-weight: 800;
+      text-align: left;
+    }
+    
     .allactivities {
+      display: flex;
       flex-direction: column;
+      gap: 38px;
       justify-content: center;
-      align-items: center;
+      max-width: 1280px;
+      width: 100%;
+      align-items: flex-start;
 
       .activity {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        text-align: left;
+      }
+      .one {
+        max-width: 550px;
+        width: 100%;
+      }
+
+      .two {
+        max-width: 550px;
+        width: 100%;
+      }
+
+      .three {
+        max-width: 550px;
+        width: 100%;
+      }
+
+      .four {
+        max-width: 550px;
+        width: 100%;
       }
     }
   }
+
   .activityhead {
     font-size: 32px;
     font-weight: 600;
     color: #2e8b57;
+    text-align: left;
   }
 
   .activitydesc {
@@ -101,6 +134,7 @@
     font-weight: 500;
     color: #000;
     opacity: 0.5;
+    text-align: left;
   }
 }
 
@@ -112,11 +146,3 @@
   }
 }
 
-@media screen and (max-width: 800px) {
-  .wrapper {
-    h2 {
-      font-size: 32px;
-      text-align: center;
-    }
-  }
-}

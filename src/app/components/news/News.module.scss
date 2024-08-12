@@ -60,7 +60,7 @@
 
 @media screen and (max-width: 1400px) {
   .wrapper {
-    padding: 0px 20px;
+    padding: 0px 40px;
 
     .itemWrapper {
       .item {
@@ -91,6 +91,7 @@
     .header {
       h2 {
         font-size: 36px;
+        text-align: left;
       }
     }
   }
@@ -99,8 +100,8 @@
 @media screen and (max-width: 673px) {
   .wrapper {
     .header {
-      justify-content: center;
-      text-align: center;
+      justify-content: flex-start;
+      text-align: left;
       a {
         display: none;
       }
