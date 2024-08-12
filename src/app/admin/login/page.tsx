@@ -67,7 +67,7 @@ export default function AdminLogin() {
       </div>
       <div className="hidden bg-muted lg:block">
         <Image
-          src="/assets/hero/background.png"
+          src="/assets/hero/background.webp"
           alt="Image"
           width="1920"
           height="1080"

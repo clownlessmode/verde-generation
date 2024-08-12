@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
-  const images = ["/assets/hero/background2.png"]; // Replace with your image paths
+  const images = ["/assets/hero/background2.webp"]; // Replace with your image paths
 
   useEffect(() => {
     const interval = setInterval(() => {

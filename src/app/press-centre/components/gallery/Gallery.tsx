@@ -188,7 +188,7 @@ const Gallery = ({ galleryData, projects }: Props) => {
                     style={{
                       backgroundImage: `
                             linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%),
-                            url(/assets/aboutus/npz.jpg)
+                            url(/assets/aboutus/npz.webp)
                             `,
                       backgroundSize: "auto, cover",
                       backgroundPosition: "center, center",
