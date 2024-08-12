@@ -72,10 +72,11 @@ const Header: React.FC = () => {
     <header className={css.wrapper}>
       <Link href={"/"}>
         <Image
-          alt="Logotype Verde"
+          alt=""
           src={"/assets/header/Logotype.svg"}
           width={150}
           height={27}
+
         />
       </Link>
 
@@ -85,7 +86,11 @@ const Header: React.FC = () => {
 
       <nav className={css.burger}>
         <Button variant={"ghost"} onClick={handleBurgerClick}>
-          {isOpen ? <X color={"#008080"} /> : <AlignJustify color={"#008080"} />}
+          {isOpen ? (
+            <X color={"#008080"} />
+          ) : (
+            <AlignJustify color={"#008080"} />
+          )}
         </Button>
         {isOpen && (
           <div className={css.burgerMenu}>
@@ -115,24 +120,24 @@ const Header: React.FC = () => {
               </div>
             ) : (
               <div className={css.burgerLinks}>
-                <h2 className={css.subMenuTitle}>МЕНЮ</h2>
-                {HeaderItems.map((item, index) => (
-                  <div
-                    key={index}
-                    onClick={() => handleMenuClick(item)}
-                    className={css.menuItem}
-                  >
-                    {item.items ? (
-                      <a>{item.title}</a>
-                    ) : (
-                      <Link href={item.href || "#"}>{item.title}</Link>
-                    )}
-                  </div>
-                ))}
-                <Link href={"tel:+73466494203"}>
-                  <Button>Связаться с нами</Button>
-                </Link>
-              </div>
+                  <h2 className={css.subMenuTitle}>МЕНЮ</h2>
+                  {HeaderItems.map((item: HeaderItem, index: React.Key | null | undefined) => (
+                    <div
+                      key={index}
+                      onClick={() => handleMenuClick(item)}
+                      className={css.menuItem}
+                    >
+                      {item.items ? (
+                        <a>{item.title}</a>
+                      ) : (
+                        <Link href={item.href || "#"}>{item.title}</Link>
+                      )}
+                    </div>
+                  ))}
+                  <Link href={"tel:+73466494203"}>
+                    <Button>Связаться с нами</Button>
+                  </Link>
+                </div>
             )}
           </div>
         )}
