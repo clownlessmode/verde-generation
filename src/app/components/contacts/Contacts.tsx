@@ -20,13 +20,11 @@ const Contacts = () => {
           height="346"
           frameBorder="0"
         ></iframe>
-
         <div className={css.addressblock}>
           <div className={css.address}>
             <h2>Адрес</h2>
             <p>Москва, 2-я Звенигородская ул., 12А</p>
           </div>
-          
         </div>
       </div>
     </section>

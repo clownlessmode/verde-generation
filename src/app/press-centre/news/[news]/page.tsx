@@ -20,7 +20,7 @@ const page = async ({ params }: { params: { news: Id<"news"> } }) => {
           <span>{newsData?.title as string}</span>
         </h1>
       </div>
-      <div className={cn("markdown-body")}>
+      <div className={cn("px-[20px]")}>
         <ReactMarkdown className={"max-w-1280px text-wrap"}>
           {newsData?.main as string}
         </ReactMarkdown>
