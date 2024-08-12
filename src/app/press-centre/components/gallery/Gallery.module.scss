@@ -10,6 +10,10 @@
     flex-direction: column;
     gap: 17px;
 
+    .itemWrapper {
+      cursor: pointer; /* Указатель при наведении на элемент */
+    }
+
     .item {
       transition: all 0.3s ease;
       max-height: 245px;
@@ -26,6 +30,7 @@
         rgba(0, 0, 0, 1) 100%
       );
       object-fit: contain;
+
       .title {
         padding: 24px;
         h3 {
@@ -86,7 +91,6 @@
   .wrapper {
     gap: 40px;
     .content {
-
       h1 {
         font-size: 30px;
       }
@@ -102,7 +106,6 @@
   .wrapper {
     gap: 50px;
     .content {
-
       h1 {
         font-size: 30px;
       }
@@ -113,3 +116,113 @@
     }
   }
 }
+
+@media screen and (max-width: 700px) {
+  .closeButton {
+    font-size: 18px !important;
+  }
+  .closeButton {
+    right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .modalContent {
+    max-width: none !important; /* Максимальная ширина с учетом отступов */
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .modalContent {
+    width: 1228.5px;
+    height: 819px;
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modalContent {
+  position: relative;
+  width: 90vw; /* Ширина окна */
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalImage {
+  width: 100%;
+  height: 100%;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.closeButton {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+  transform: scale(1.15);
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.3);
+  border: none;
+  font-size: 100px;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 10px;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.navButton:hover {
+  scale: 1.05;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.navButton.left {
+  left: 10px;
+}
+
+.navButton.right {
+  right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .closeButton {
+    font-size: 36px;
+  }
+  .navButton {
+    font-size: 36px;
+    padding: 8px;
+  }
+}
+

@@ -72,7 +72,7 @@ export default function Dashboard() {
               <TabsList>
                 <TabsTrigger value="projects">Проекты</TabsTrigger>
                 <TabsTrigger value="news">Новости</TabsTrigger>
-                <TabsTrigger value="gallery">Фотогаллерея</TabsTrigger>
+                <TabsTrigger value="gallery">Фотогалерея</TabsTrigger>
               </TabsList>
             </div>
             <TabsContent value="projects">
@@ -287,7 +287,7 @@ export default function Dashboard() {
               <Card x-chunk="dashboard-06-chunk-0">
                 <CardHeader>
                   <CardTitle className="gap-5 flex flex-row items-center">
-                    Фотогаллерея
+                    Фотогалерея
                     <Link href={"/admin/gallery/add"}>
                       <Button size="sm" className="h-8 gap-1">
                         <PlusCircle className="h-3.5 w-3.5" />
