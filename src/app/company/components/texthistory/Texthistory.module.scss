@@ -12,9 +12,10 @@
   }
 
   h1 {
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 600;
-    line-height: 112%;
+    line-height: 28px;
+    text-align: left;
     text-align: justify;
     span {
       color: #2e8b57;
@@ -31,22 +32,18 @@
 @media screen and (max-width: 1400px) {
   .wrapper {
     padding: 0px 40px;
-    
   }
 }
 
 @media screen and (max-width: 750px) {
   .wrapper {
     h1 {
-      font-size: 24px;
-      text-align: left;
+      font-size: 18px;
+      line-height: 22px;
     }
     .pwrapper p {
       font-size: 16px;
       text-align: left;
-
-      
     }
-    
   }
 }

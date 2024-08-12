@@ -19,7 +19,7 @@ const Textaboutus = () => {
         </h1>
       </div>
       <div>
-        <p>Основные направления нашей деятельности:</p>
+        <p className={css.AboutUsP}>Основные направления нашей деятельности:</p>
         <ul>
           <li>
             <div className={css.circle} />
@@ -45,7 +45,7 @@ const Textaboutus = () => {
         height={894}
         width={1280}
         className={css.imageMain}
-      /> 
+      />
     </section>
   );
 };

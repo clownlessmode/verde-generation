@@ -1,15 +1,20 @@
+"use client";
 import React from "react";
 import css from "./Footer.module.scss";
-
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const path = usePathname();
+
+  if (path === "/contacts") {
+    return null;
+  }
+
   return (
     <footer className={css.wrapper}>
-      <div>
-        <p>Москва, 2-я Звенигородская ул., 12А</p>
-        <p>+7 123 321 12 23</p>
-        <p>info@verneg.com</p>
-      </div>
+      <p>Москва, 2-я Звенигородская ул., 12А</p>
+      <Link href={"mailto:info@verdeg.com"}>info@verdeg.com</Link>
     </footer>
   );
 };

@@ -5,6 +5,8 @@ import css from "./Contacts.module.scss";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { ToastContainer } from "react-toastify";
+import Link from "next/link";
+import { Mail } from "lucide-react";
 
 const ContactsLink = dynamic(() => import("./ContactsLink"), { ssr: false });
 
@@ -24,6 +26,13 @@ const Contacts = () => {
           <div className={css.address}>
             <h2>Адрес</h2>
             <p>Москва, 2-я Звенигородская ул., 12А</p>
+          </div>
+          <div className={css.mail}>
+            <h2>Почта</h2>
+            <Link href={"mailto:info@verdeg.com"}>
+              <Mail color="#008080" />
+              <p className={css.mailtext}>info@verdeg.com</p>
+            </Link>
           </div>
         </div>
       </div>

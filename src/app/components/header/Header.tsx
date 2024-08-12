@@ -65,7 +65,6 @@ const Header: React.FC = () => {
 
   const handleBurgerClick = () => {
     setIsOpen(!isOpen);
-    setActiveMenu(null);
   };
 
   return (
@@ -122,13 +121,15 @@ const Header: React.FC = () => {
               </div>
             ) : (
               <div className={css.burgerLinks}>
-                <Image
-                  alt=""
-                  src={"/assets/header/Logotype.svg"}
-                  width={150}
-                  height={27}
-                  className={css.penisoobraazniy}
-                />
+                <Link href="/" onClick={handleBurgerClick}>
+                  <Image
+                    alt=""
+                    src={"/assets/header/Logotype.svg"}
+                    width={150}
+                    height={27}
+                    className={css.penisoobraazniy}
+                  />
+                </Link>
                 {HeaderItems.map(
                   (item: HeaderItem, index: React.Key | null | undefined) => (
                     <div

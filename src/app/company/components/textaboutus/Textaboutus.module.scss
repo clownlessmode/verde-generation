@@ -6,22 +6,24 @@
   width: 100%;
 
   .imageMain {
-      max-height: 894px;
-      max-width: 1280px;
-      width: 100%;
-      object-fit: cover;
+    max-height: 894px;
+    max-width: 1280px;
+    width: 100%;
+    object-fit: cover;
   }
 
   h1 {
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 600;
-    line-height: 112%;
+    line-height: 28px;
     text-align: left;
     span {
       color: #2e8b57;
     }
   }
-
+  .AboutUsP {
+    font-weight: 800;
+  }
   p,
   ul {
     font-size: 20px;
@@ -46,27 +48,26 @@
 .circle {
   width: 4px;
   height: 4px;
-  background: #000;
+  background: #008080;
   border-radius: 100%;
+  opacity: 1;
 }
 
 @media screen and (max-width: 1400px) {
   .wrapper {
     padding: 0px 20px;
-    
   }
 }
 
 @media screen and (max-width: 750px) {
   .wrapper {
     h1 {
-      font-size: 24px;
+      font-size: 18px;
+      line-height: 22px;
     }
     p,
     ul {
       font-size: 16px;
-      
     }
-    
   }
 }

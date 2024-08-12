@@ -13,7 +13,7 @@ export default function Home() {
       <AboutUs />
       <Activities />
       <Map />
-      <News />
+      {/* <News /> */}
     </main>
   );
 }
