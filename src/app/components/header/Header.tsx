@@ -76,7 +76,6 @@ const Header: React.FC = () => {
           src={"/assets/header/Logotype.svg"}
           width={150}
           height={27}
-
         />
       </Link>
 
@@ -94,7 +93,9 @@ const Header: React.FC = () => {
         </Button>
         {isOpen && (
           <div className={css.burgerMenu}>
-            <div className={css.gradientOverlay}></div>
+            <div className={css.gradientOverlay}>
+              <X color={"#008080"} onClick={handleBurgerClick} />
+            </div>
             {activeMenu ? (
               <div className={css.subMenu}>
                 <Button
@@ -120,8 +121,9 @@ const Header: React.FC = () => {
               </div>
             ) : (
               <div className={css.burgerLinks}>
-                  <h2 className={css.subMenuTitle}>МЕНЮ</h2>
-                  {HeaderItems.map((item: HeaderItem, index: React.Key | null | undefined) => (
+                <h2 className={css.subMenuTitle}>МЕНЮ</h2>
+                {HeaderItems.map(
+                  (item: HeaderItem, index: React.Key | null | undefined) => (
                     <div
                       key={index}
                       onClick={() => handleMenuClick(item)}
@@ -133,11 +135,12 @@ const Header: React.FC = () => {
                         <Link href={item.href || "#"}>{item.title}</Link>
                       )}
                     </div>
-                  ))}
-                  <Link href={"tel:+73466494203"}>
-                    <Button>Связаться с нами</Button>
-                  </Link>
-                </div>
+                  )
+                )}
+                <Link href={"tel:+73466494203"}>
+                  <Button>Связаться с нами</Button>
+                </Link>
+              </div>
             )}
           </div>
         )}
