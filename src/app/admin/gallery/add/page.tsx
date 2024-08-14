@@ -15,9 +15,9 @@ import Link from "next/link";
 
 const Page = () => {
   const [uploadProgress, setUploadProgress] = useState(0);
-  const [type, setType] = useState<"life" | "production" | undefined>(
-    undefined
-  );
+  
+  const [type, setType] = useState<"life" | "production">("life"); // Set "life" as the default value
+
   const [image, setImage] = useState("");
   const [isUploading, setIsUploading] = useState(false);
   const createGalleryItem = useMutation(api.photogallery.createGalleryItem);
