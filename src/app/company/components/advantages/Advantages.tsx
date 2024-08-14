@@ -3,13 +3,14 @@ import css from "./Advantages.module.scss";
 import Breadcrumb from "../breadcrumb/Breadcrumb";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Atom, Bot, CircuitBoard, Cog, Users, Webhook, X } from "lucide-react";
+import { Atom, Bot, CircuitBoard, Cog, Factory, Users, Webhook, X } from "lucide-react";
 
 interface advantagesItems {
   image: React.ReactNode;
   text: string;
-  description: string;
+  description: string | JSX.Element;
 }
+
 
 const advantagesItems: advantagesItems[] = [
   {
@@ -22,7 +23,7 @@ const advantagesItems: advantagesItems[] = [
     image: <Users color="#008080" size={200} />,
     text: "Специалисты высокого класса",
     description:
-      "Высококвалифицированные специалисты с опытом в бурении и ремонте гарантируют высокое качество и соблюдение сроков.",
+      "Высококвалифицированная эффективная команда с многолетним опытом в нефтегазовой промышленности гарантируют высокое качество и соблюдение сроков разработки и оптимизации месторождений углеводородного сырья.",
   },
   {
     image: <Webhook color="#008080" size={200} />,
@@ -48,7 +49,18 @@ const advantagesItems: advantagesItems[] = [
     description:
       "Использование искусственного интеллекта для управления производством LPG повышает общую эффективность, контролируя десятки параметров одновременно.",
   },
+  {
+    image: <Factory color="#008080" size={200} />,
+    text: "Мобильные и модульные решения для газовой инфраструктуры",
+    description: (
+      <>
+        - Мобильные комплексы С3-С4 – новая технология на рынке <br />
+        - Мобильные комплексы СПГ – ниша факелов ПНГ
+      </>
+    )
+  },
 ];
+
 
 const Advantages = () => {
   return (
