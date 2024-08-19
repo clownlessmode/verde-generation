@@ -35,7 +35,12 @@ interface Project {
 const Navigation = () => {
   const projects = useQuery(api.projects.listProjects);
   const pathname = usePathname();
-
+  const projectHoverColors: { [key: string]: string } = {
+    "Караганда (Казахстан)": "hover:text-[#0077ff]", // синий
+    УралГаз: "hover:text-[#0077ff]", // золотой
+    "Volga Gas": "hover:text-[#f7d000]", // золотой
+    ТПГК: "hover:text-[#0077ff]", // золотой
+  };
   const HeaderItems: HeaderItem[] = [
     {
       title: "Главная",
@@ -44,10 +49,11 @@ const Navigation = () => {
     {
       title: "Проекты",
       href: "Title",
-      items: projects?.map((project) => ({
-        title: project.title,
-        href: `/projects/${project._id}`,
-      })) || [],
+      items:
+        projects?.map((project) => ({
+          title: project.title,
+          href: `/projects/${project._id}`,
+        })) || [],
     },
     {
       title: "О компании",
@@ -85,7 +91,14 @@ const Navigation = () => {
               </div>
               <div className={css.dropdownContent}>
                 {item.items.map((dropdownItem, index) => (
-                  <Link href={dropdownItem.href} key={index}>
+                  <Link
+                    href={dropdownItem.href}
+                    key={index}
+                    className={cn(
+                      projectHoverColors[dropdownItem.title] ||
+                        "hover:text-[#008080]"
+                    )}
+                  >
                     {dropdownItem.title}
                   </Link>
                 ))}
