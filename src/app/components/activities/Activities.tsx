@@ -12,25 +12,22 @@ const Activities = () => {
         <div className={cn(css.activity, css.one)}>
           <h3 className={css.activityhead}>Ликвидность</h3>
           <p className={css.activitydesc}>
-            Высокая ликвидность актива: рост стоимости за счёт старта добычи до
-            10 раз
+            Высокая, рост стоимости актива за счет старта добычи до 10 раз
           </p>
         </div>
         <div className={cn(css.activity, css.two)}>
-          <h3 className={css.activityhead}>Безопасность</h3>
+          <h3 className={css.activityhead}>Стартовые инвестиции</h3>
           <p className={css.activitydesc}>
-            Лицензии имеют большие сроки действия до 50 лет
+            В 2-3 раза ниже среднерыночных до выхода на самофинансирование
           </p>
         </div>
         <div className={cn(css.activity, css.three)}>
-          <h3 className={css.activityhead}>Стартовые инвестиции</h3>
-          <p className={css.activitydesc}>
-            Инвестиции до выхода на самофинансирование
-          </p>
+          <h3 className={css.activityhead}>Срок окупаемости</h3>
+          <p className={css.activitydesc}>От 2 до 4 лет</p>
         </div>
         <div className={cn(css.activity, css.four)}>
-          <h3 className={css.activityhead}>Рентабельность</h3>
-          <p className={css.activitydesc}>От 2-х до 4-х лет</p>
+          <h3 className={css.activityhead}>Лицензии на добычу</h3>
+          <p className={css.activitydesc}>Сроки действия 50+ лет</p>
         </div>
       </div>
     </section>

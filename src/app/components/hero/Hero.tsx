@@ -26,7 +26,10 @@ const Hero = () => {
         filter: currentImage === 1 ? "brightness(1)" : "none",
       }}
     >
-      <h1>Комплексный подход к разработке нефтегазовых месторождений</h1>
+      <h1>
+        Операторская компания полного цикла: от геологоразведки до эксплуатации
+        месторождений нефти и газа
+      </h1>
       <div>
         <Link href={"mailto:info@verdeg.com"}>
           <Button variant={"secondary"}>Связаться с нами</Button>
