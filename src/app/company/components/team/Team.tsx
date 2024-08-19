@@ -18,7 +18,7 @@ interface Person {
 const Textaboutus = () => {
   const team: Team[] = [
     {
-      office: "Офис Москва",
+      office: "Москва",
       persons: [
         {
           image: "/assets/company/team/Зозуля Андрей Викторович, СЕО.webp",
@@ -31,7 +31,6 @@ const Textaboutus = () => {
           name: "Ким Надежда Александровна",
           position: "Главный бухгалтер",
         },
-
         {
           image:
             "/assets/company/team/Вишняков Денис Александрович, Бизнес-ассистент.webp",
@@ -100,33 +99,51 @@ const Textaboutus = () => {
   return (
     <section className={css.wrapper}>
       <Breadcrumb initial="О компании" page="Команда" />
-      <div className={css.Teams}>
-        {team.map((item, index) => (
-          <div className={css.team} key={index}>
-            <h1>{item.office}</h1>
-            <div className={css.teamwrapper}>
-              {item.persons.map((item, index) => (
-                <div className={css.teammember} key={index}>
-                  <Image
-                    alt=""
-                    src={item.image}
-                    height={411}
-                    width={411}
-                    className={cn(
-                      "max-h-[570px] object-cover max-w-[411px]",
-                      css.teamimage
-                    )}
-                  />
-                  <div className={css.teammembertext}>
-                    <h2>{item.name}</h2>
-                    <p>{item.position}</p>
-                    <div className={css.line} />
-                  </div>
-                </div>
-              ))}
-            </div>
+      <div className={css.Teams} >
+        {/* Отображаем название офиса "Москва" */}
+        <h1>{team[0].office}</h1>
+
+        {/* Отображаем СЕО */}
+        <div className={css.teammember}  id={css.ceo}>
+          <Image
+            alt=""
+            src={team[0].persons[0].image}
+            height={411}
+            width={411}
+            className={cn(
+              "max-h-[570px] object-cover max-w-[411px]",
+              css.teamimage
+            )}
+          />
+          <div className={css.teammembertext}>
+            <h2>{team[0].persons[0].name}</h2>
+            <p>{team[0].persons[0].position}</p>
+            <div className={css.line} />
           </div>
-        ))}
+        </div>
+
+        {/* Отображаем остальных сотрудников */}
+        <div className={css.teamwrapper}>
+          {team[0].persons.slice(1).map((person, index) => (
+            <div className={css.teammember} key={index}>
+              <Image
+                alt=""
+                src={person.image}
+                height={411}
+                width={411}
+                className={cn(
+                  "max-h-[570px] object-cover max-w-[411px]",
+                  css.teamimage
+                )}
+              />
+              <div className={css.teammembertext}>
+                <h2>{person.name}</h2>
+                <p>{person.position}</p>
+                <div className={css.line} />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

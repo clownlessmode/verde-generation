@@ -1,6 +1,8 @@
 import { v } from "convex/values";
 import { mutation, query } from "./_generated/server";
 
+
+
 export const listGalleryItems = query({
   handler: async (ctx) => {
     const galleryItems = await ctx.db.query("gallery").collect();
