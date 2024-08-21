@@ -94,6 +94,150 @@ const Textaboutus = () => {
         },
       ],
     },
+    {
+      office: "Саратов",
+      persons: [
+        {
+          image:
+            "/assets/company/team/Лючев Владимир Ильич, Главный энергетик.webp",
+          name: "Лючев Владимир Ильич",
+          position: "Главный энергетик",
+        },
+        {
+          image:
+            "/assets/company/team/Горбунов Вадим Валерьевич, Руководитель службы эксплуатации зданий и сооружений.webp",
+          name: "Горбунов Вадим Валерьевич",
+          position: "Руководитель службы эксплуатации зданий и сооружений",
+        },
+        {
+          image:
+            "/assets/company/team/Енютин Иван Михайлович, Заместитель руководителя проекта.webp",
+          name: "Енютин Иван Михайлович",
+          position: "Заместитель руководителя проекта",
+        },
+        {
+          image:
+            "/assets/company/team/Жучков Сергей Васильевич, Главный инженер-механик.webp",
+          name: "Жучков Сергей Васильевич",
+          position: "Главный инженер-механик",
+        },
+        {
+          image:
+            "/assets/company/team/Лабыкин Данила Андреевич, Руководитель отдела бурения.webp",
+          name: "Лабыкин Данила Андреевич",
+          position: "Руководитель отдела бурения",
+        },
+        {
+          image:
+            "/assets/company/team/Латышева Светлана Владимировна, Ведущий специалист промышленной безопасности и охраны труда.webp",
+          name: "Латышева Светлана Владимировна",
+          position:
+            "Ведущий специалист промышленной безопасности и охраны труда",
+        },
+        {
+          image:
+            "/assets/company/team/Маликова Лилия Александровна, Эколог.webp",
+          name: "Маликова Лилия Александровна",
+          position: "Эколог",
+        },
+        {
+          image:
+            "/assets/company/team/Морозов Михаил Владимирович, Начальник отдела капитального строительства.webp",
+          name: "Морозов Михаил Владимирович",
+          position: "Начальник отдела капитального строительства",
+        },
+
+        {
+          image:
+            "/assets/company/team/Орлов Максим Александрович, Руководитель отдела закупок.webp",
+          name: "Орлов Максим Александрович",
+          position: "Руководитель отдела закупок",
+        },
+        {
+          image:
+            "/assets/company/team/Поляков Александр Сергеевич, Специалист по закупкам.webp",
+          name: "Поляков Александр Сергеевич",
+          position: "Специалист по закупкам",
+        },
+        {
+          image:
+            "/assets/company/team/Севостьянов Михаил Геннадьевич, Заместитель руководителя департамента правового сопровождения и комплаенса.webp",
+          name: "Севостьянов Михаил Геннадьевич",
+          position:
+            "Заместитель руководителя департамента правового сопровождения и комплаенса",
+        },
+        {
+          image:
+            "/assets/company/team/Сердобинцева Юлия Констатиновна, Заместитель главного бухгалтера.webp",
+          name: "Сердобинцева Юлия Констатиновна",
+          position: "Заместитель главного бухгалтера",
+        },
+        {
+          image:
+            "/assets/company/team/Федорова Наталья Владимировна, Руководитель департамента правового сопровождения и комплаенса.webp",
+          name: "Федорова Наталья Владимировна",
+          position:
+            "Руководитель департамента правового сопровождения и комплаенса",
+        },
+        {
+          image:
+            "/assets/company/team/Филиппов Григорий Сергеевич, Заместитель руководителя отдела закупок.webp",
+          name: "Филиппов Григорий Сергеевич",
+          position: "Заместитель руководителя отдела закупок",
+        },
+
+        {
+          image:
+            "/assets/company/team/Чурилин Дмитрий Валерьевич, Ведущий юрист департамента правового сопровождения и комплаенса.webp",
+          name: "Чурилин Дмитрий Валерьевич,",
+          position:
+            "Ведущий юрист департамента правового сопровождения и комплаенса",
+        },
+        {
+          image:
+            "/assets/company/team/Щербаков Илья Вадимович, Заместитель генерального директора по бурению ИКРС.webp",
+          name: "Щербаков Илья Вадимович",
+          position: "Заместитель генерального директора по бурению ИКРС",
+        },
+        {
+          image:
+            "/assets/company/team/Щукина Оксана Владимировна, Руководитель отдела кадров.webp",
+          name: "Щукина Оксана Владимировна",
+          position: "Руководитель отдела кадров",
+        },
+      ],
+    },
+    {
+      office: "Инта",
+      persons: [
+   
+        {
+          image: "/assets/company/team/Никифоров А.А.jpg",
+          name: "Никифоров А.А",
+          position: "----",
+        },
+        {
+          image: "/assets/company/team/Попова Людмила Александровна, Администратор офиса.jpg",
+          name: "Попова Людмила Александровна",
+          position: "Администратор офиса",
+        },
+        {
+          image: "/assets/company/team/Шеломанов Виталий Викторович, Заместитель начальника службы АМиС.jpg",
+          name: "Шеломанов Виталий Викторович",
+          position: "Заместитель начальника службы АМиС",
+        },
+        {
+          image: "/assets/company/team/Сикидин Никита Владимирович, Механик.jpg",
+          name: "Сикидин Никита Владимирович",
+          position: "Механик",
+        },
+        {
+          image: "/assets/company/team/Абрамов Артем Олегович, Главный механик.jpg",
+          name: "Абрамов Артем Олегович",
+          position: "Главный механик",
+        },
+      ],
+    },
   ];
 
   return (
@@ -119,12 +263,52 @@ const Textaboutus = () => {
           </div>
         </div>
         <h1>{team[0].office}</h1>
-
-        {/* Отображаем СЕО */}
-
-        {/* Отображаем остальных сотрудников */}
         <div className={css.teamwrapper}>
           {team[0].persons.slice(1).map((person, index) => (
+            <div className={css.teammember} key={index}>
+              <Image
+                alt=""
+                src={person.image}
+                height={411}
+                width={411}
+                className={cn(
+                  "max-h-[570px] object-cover max-w-[411px] rounded-sm",
+                  css.teamimage
+                )}
+              />
+              <div className={css.teammembertext}>
+                <h2>{person.name}</h2>
+                <p>{person.position}</p>
+                <div className={css.line} />
+              </div>
+            </div>
+          ))}
+        </div>
+        <h1>{team[1].office}</h1>
+        <div className={css.teamwrapper}>
+          {team[1].persons.map((person, index) => (
+            <div className={css.teammember} key={index}>
+              <Image
+                alt=""
+                src={person.image}
+                height={411}
+                width={411}
+                className={cn(
+                  "max-h-[570px] object-cover max-w-[411px] rounded-sm",
+                  css.teamimage
+                )}
+              />
+              <div className={css.teammembertext}>
+                <h2>{person.name}</h2>
+                <p>{person.position}</p>
+                <div className={css.line} />
+              </div>
+            </div>
+          ))}
+        </div>
+        <h1>{team[2].office}</h1>
+        <div className={css.teamwrapper}>
+          {team[2].persons.map((person, index) => (
             <div className={css.teammember} key={index}>
               <Image
                 alt=""
