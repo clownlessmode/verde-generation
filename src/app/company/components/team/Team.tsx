@@ -99,19 +99,16 @@ const Textaboutus = () => {
   return (
     <section className={css.wrapper}>
       <Breadcrumb initial="О компании" page="Команда" />
-      <div className={css.Teams} >
+      <div className={css.Teams}>
         {/* Отображаем название офиса "Москва" */}
-        <h1>{team[0].office}</h1>
-
-        {/* Отображаем СЕО */}
-        <div className={css.teammember}  id={css.ceo}>
+        <div className={css.teammember} id={css.ceo}>
           <Image
             alt=""
             src={team[0].persons[0].image}
             height={411}
             width={411}
             className={cn(
-              "max-h-[570px] object-cover max-w-[411px]",
+              "max-h-[570px] object-cover max-w-[411px] rounded-sm",
               css.teamimage
             )}
           />
@@ -121,6 +118,9 @@ const Textaboutus = () => {
             <div className={css.line} />
           </div>
         </div>
+        <h1>{team[0].office}</h1>
+
+        {/* Отображаем СЕО */}
 
         {/* Отображаем остальных сотрудников */}
         <div className={css.teamwrapper}>
@@ -132,7 +132,7 @@ const Textaboutus = () => {
                 height={411}
                 width={411}
                 className={cn(
-                  "max-h-[570px] object-cover max-w-[411px]",
+                  "max-h-[570px] object-cover max-w-[411px] rounded-sm",
                   css.teamimage
                 )}
               />

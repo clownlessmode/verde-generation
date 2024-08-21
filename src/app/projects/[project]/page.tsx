@@ -6,6 +6,107 @@ import { fetchQuery } from "convex/nextjs";
 import { api } from "../../../../convex/_generated/api";
 import { reverseTransliterate } from "@/lib/translicate";
 import { Id } from "../../../../convex/_generated/dataModel";
+const findProjectMaps = (projectId: string) => {
+  const projectGround = grounds.find((ground) => ground.id === projectId);
+  return projectGround ? projectGround.maps : [];
+};
+
+interface MapEntry {
+  title: string;
+  map: React.ReactElement;
+}
+
+interface Ground {
+  id: string;
+  maps: MapEntry[]; // This should only be an array of MapEntry objects
+}
+
+const grounds: Ground[] = [
+  {
+    id: "jd7amnp1ve34a12wc8yvny0f4n6ypscx", // Узбекистан
+    maps: [
+      {
+        title: "",
+        map: (
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A6b98806f2640b15ed958a5957d9aa4430cc13535b0bc69075928b2a6b3b42331&amp;source=constructor"
+            width="1280"
+            height="360"
+          ></iframe>
+        ),
+      },
+      {
+        title: "",
+        map: (
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A998d874ef03f8d0f8a3540fa627b0293ec8fa86a18a91d0ace85d8051bb418e0&amp;source=constructor"
+            width="1280"
+            height="360"
+          ></iframe>
+        ),
+      },
+      {
+        title: "",
+        map: (
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3Ade358d294b7d9fd38ea80144a7428e86b0c8146239a05301150831607c1994c2&amp;source=constructor"
+            width="1280"
+            height="360"
+          ></iframe>
+        ),
+      },
+    ],
+  },
+  {
+    id: "jd71vrmqprcy2f3hgmkc4h10x56yqhgc", // Пенза
+    maps: [
+      {
+        title: "",
+        map: (
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A4bec6bbdefa5ba9ea5a23393f873c709c6b5cdd8fa231f952881941954b9ee3d&amp;source=constructor"
+            width="1280"
+            height="360"
+          ></iframe>
+        ),
+      },
+      {
+        title: "",
+        map: (
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae6852e9ba7c427687f035a8814f2faa6ef079d421168d58910b6536ffcb65340&amp;source=constructor"
+            width="1280"
+            height="360"
+          ></iframe>
+        ),
+      },
+    ],
+  },
+  {
+    id: "jd718rew9vj8n5w02jb8h0s2nn6yqg82", // Урал
+    maps: [
+      {
+        title: "",
+        map: (
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A5a52cdce5035a776aaf995bfc6482c194a065801a994d298ddc20ea48816718c&amp;source=constructor"
+            width="1280"
+            height="360"
+          ></iframe>
+        ),
+      },
+    ],
+  },
+  {
+    id: "jd7dcean37hqdsbhnbjxhn3rg56ypybp", // волга
+    maps: [],
+  },
+  {
+    id: "jd7fkbx310ssnyb01f9ns6dqy56y00he", // ТПГК
+    maps: [],
+  },
+];
+
 interface Dates {
   timestart: string;
   timeend: string;
@@ -31,7 +132,7 @@ const page = async ({ params }: { params: { project: Id<"projects"> } }) => {
   const projectData: Project = (await fetchQuery(api.projects.getProject, {
     projectId: params.project,
   })) as Project;
-
+  const projectMaps = findProjectMaps(params.project);
   return (
     <main className={css.wrapper}>
       <Breadcrumb initial="Проекты" page={projectData.title} />
@@ -58,7 +159,6 @@ const page = async ({ params }: { params: { project: Id<"projects"> } }) => {
                 width={640}
                 height={396}
                 className={css.subImage}
-
               />
               {projectData.title === "Volga Gas" && projectData.dates && (
                 <div className={css.dates}>
@@ -89,6 +189,16 @@ const page = async ({ params }: { params: { project: Id<"projects"> } }) => {
             </div>
           </div>
         </div>
+        {projectMaps.length > 0 && (
+          <div className="flex flex-col gap-3">
+            {projectMaps.map((mapEntry, index) => (
+              <div key={`${params.project}-${index}`} className={css.mapItem}>
+                <h3>{mapEntry.title}</h3>
+                {mapEntry.map}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </main>
   );
