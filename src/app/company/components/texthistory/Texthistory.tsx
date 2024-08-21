@@ -34,7 +34,7 @@ const Textaboutus = () => {
       </div>
       <Image
         alt=""
-        src={"/assets/company/aboutus/npz.webp"}
+        src={"/assets/company/aboutus/Подраздел История.jpeg"}
         height={894}
         width={1280}
         className={css.mainImage}

@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <footer className={css.wrapper}>
-      <p>Москва, 2-я Звенигородская ул., 12А</p>
+      <p>Москва, Пресненская набережная, 12</p>
       <Link href={"mailto:info@verdeg.com"}>info@verdeg.com</Link>
     </footer>
   );
