@@ -14,7 +14,10 @@
 
 @media screen and (max-width: 1350px) {
   .wrapper {
-    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
     padding-top: 64px;
     padding-bottom: 40px;
     padding-left: 40px;

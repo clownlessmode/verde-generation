@@ -27,7 +27,7 @@ const Activities = () => {
         </div>
         <div className={cn(css.activity, css.four)}>
           <h3 className={css.activityhead}>Лицензии на добычу</h3>
-          <p className={css.activitydesc}>Сроки действия 50+ лет</p>
+          <p className={css.activitydesc}>Срок действия 50+ лет</p>
         </div>
       </div>
     </section>

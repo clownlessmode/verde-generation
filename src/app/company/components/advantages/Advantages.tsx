@@ -3,14 +3,22 @@ import css from "./Advantages.module.scss";
 import Breadcrumb from "../breadcrumb/Breadcrumb";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Atom, Bot, CircuitBoard, Cog, Factory, Users, Webhook, X } from "lucide-react";
+import {
+  Atom,
+  Bot,
+  CircuitBoard,
+  Cog,
+  Factory,
+  Users,
+  Webhook,
+  X,
+} from "lucide-react";
 
 interface advantagesItems {
   image: React.ReactNode;
   text: string;
   description: string | JSX.Element;
 }
-
 
 const advantagesItems: advantagesItems[] = [
   {
@@ -54,13 +62,12 @@ const advantagesItems: advantagesItems[] = [
     text: "Мобильные и модульные решения для газовой инфраструктуры",
     description: (
       <>
-        - Мобильные комплексы С3-С4 – новая технология на рынке <br />
-        - Мобильные комплексы СПГ – ниша факелов ПНГ
+        - Мобильные комплексы С3-С4 – новая технология на рынке; <br />-
+        Мобильные комплексы СПГ – ниша факелов ПНГ.
       </>
-    )
+    ),
   },
 ];
-
 
 const Advantages = () => {
   return (
