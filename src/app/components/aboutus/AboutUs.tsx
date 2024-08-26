@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 const AboutUs = () => {
   return (
     <section className={css.wrapper}>
-      <h2 className={css.header}>О нашей компании</h2>
+      <h2 className={css.header}>Основные направления нашей деятельности</h2>
       <div className={css.content}>
         <div className={css.imageWrapper}>
           <Image
