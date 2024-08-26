@@ -131,9 +131,9 @@ const grounds: Ground[] = [
         title: "",
         map: (
           <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3A0856ddb1c7285023d1eb7d2819237878932b1614735d970d0fdbf2793b2c3b55&amp;source=constructor"
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A16bcef310ae02e150254ead0c57d633f7cf28f06495f8c78fa13867f6db7be77&amp;source=constructor"
             width="1280"
-            height="360"
+            height="523"
             frameBorder="0"
           ></iframe>
         ),
