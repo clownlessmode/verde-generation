@@ -21,7 +21,7 @@ const Textaboutus = () => {
       office: "Москва",
       persons: [
         {
-          image: "/assets/company/team/Зозуля Андрей Викторович, СЕО.webp",
+          image: "/assets/company/team/Зозуля Андрей Викторович,СЕО.webp",
           name: "Зозуля Андрей Викторович",
           position: "СЕО",
         },

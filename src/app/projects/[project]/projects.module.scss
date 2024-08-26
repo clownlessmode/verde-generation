@@ -33,7 +33,7 @@
       gap: 54px;
 
       .header {
-          text-align: left;
+        text-align: left;
         flex-direction: column;
         gap: 24px;
         width: 100%;
@@ -142,14 +142,17 @@
         gap: 14px;
 
         .mainImage {
-          max-width: 1280px;
-          height: 300px;
-          object-fit: cover;
+          max-width: 100%;
+          height: auto; /* Сохраняет пропорции */
+          object-fit: contain; /* Уменьшает изображение, чтобы оно полностью вписалось в контейнер */
           width: 100%;
         }
 
         .subImage {
-          display: none;
+          max-width: 100%;
+          height: auto; /* Сохраняет пропорции */
+          object-fit: contain; /* Уменьшает изображение, чтобы оно полностью вписалось в контейнер */
+          width: 100%;
         }
       }
     }
@@ -181,11 +184,7 @@
       }
     }
     h3 {
-
-      font-size:16px;
-
+      font-size: 16px;
     }
-    
   }
 }
-

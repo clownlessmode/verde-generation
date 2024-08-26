@@ -99,11 +99,46 @@ const grounds: Ground[] = [
   },
   {
     id: "jd7dcean37hqdsbhnbjxhn3rg56ypybp", // волга
-    maps: [],
+    maps: [
+      {
+        title: "",
+        map: (
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3Aac58d962b86eb0b4c9db8a2b9bdb39b1be9b83890819df6585bc32ba7ebeaab5&amp;source=constructor"
+            width="1280"
+            height="360"
+            frameBorder="0"
+          ></iframe>
+        ),
+      },
+      {
+        title: "",
+        map: (
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3Adf2fbf5dbe3056204a901eec24d9b54fd858f1b3fe5d086bce78c287b61aad38&amp;source=constructor"
+            width="1280"
+            height="360"
+            frameBorder="0"
+          ></iframe>
+        ),
+      },
+    ],
   },
   {
     id: "jd7fkbx310ssnyb01f9ns6dqy56y00he", // ТПГК
-    maps: [],
+    maps: [
+      {
+        title: "",
+        map: (
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A0856ddb1c7285023d1eb7d2819237878932b1614735d970d0fdbf2793b2c3b55&amp;source=constructor"
+            width="1280"
+            height="360"
+            frameBorder="0"
+          ></iframe>
+        ),
+      },
+    ],
   },
 ];
 

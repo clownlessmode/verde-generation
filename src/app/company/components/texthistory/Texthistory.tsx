@@ -32,7 +32,7 @@ const Textaboutus = () => {
       </div>
       <Image
         alt=""
-        src={"/assets/company/aboutus/Фото в подраздел История.jpg"}
+        src={"/assets/company/aboutus/History.webp"}
         height={894}
         width={1280}
         className={css.mainImage}
