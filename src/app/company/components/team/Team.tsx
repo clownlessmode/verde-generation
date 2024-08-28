@@ -21,67 +21,57 @@ const Textaboutus = () => {
       office: "Москва",
       persons: [
         {
-          image: "/assets/company/team/Зозуля Андрей Викторович,СЕО.webp",
+          image: "/assets/company/team/Zozulya.webp",
           name: "Зозуля Андрей Викторович",
           position: "СЕО",
         },
         {
-          image:
-            "/assets/company/team/Ким Надежда Александровна, Главный бухгалтер.webp",
+          image: "/assets/company/team/Kim.webp",
           name: "Ким Надежда Александровна",
           position: "Финансовый директор",
         },
         {
-          image:
-            "/assets/company/team/Вишняков Денис Александрович, Бизнес-ассистент.webp",
+          image: "/assets/company/team/Vishnyakov.webp",
           name: "Вишняков Денис Александрович",
           position: "Бизнес-ассистент",
         },
         {
-          image:
-            "/assets/company/team/Рубан Константин Юрьевич, Технический директор.webp",
+          image: "/assets/company/team/Ruban.webp",
           name: "Рубан Константин Юрьевич",
           position: "Технический директор",
         },
         {
-          image:
-            "/assets/company/team/Карпухин Сергей Михайлович, Директор по геологоразведке.webp",
+          image: "/assets/company/team/Karpukhin.webp",
           name: "Карпухин Сергей Михайлович",
           position: "Директор по геологоразведке",
         },
         {
-          image:
-            "/assets/company/team/Перфилова Юлия Владимировна, Главный специалист по лицензированию и геологоразведке.webp",
+          image: "/assets/company/team/Perfilova.webp",
           name: "Перфилова Юлия Владимировна",
           position: "Главный специалист по лицензированию и геологоразведке",
         },
         {
-          image:
-            "/assets/company/team/Поляков Михаил Сергеевич, Ведущий геолог.webp",
+          image: "/assets/company/team/PolyakovMikhail.webp",
           name: "Поляков Михаил Сергеевич",
           position: "Ведущий геолог",
         },
         {
-          image:
-            "/assets/company/team/Осокин Степан Артемович, Ведущий аналитик данных ГИС.webp",
+          image: "/assets/company/team/Osokin.webp",
           name: "Осокин Степан Артемович",
           position: "Ведущий аналитик данных ГИС",
         },
         {
-          image:
-            "/assets/company/team/Гаврилов Иван Петрович, Коммерческий директор.webp",
+          image: "/assets/company/team/Gavrilov.webp",
           name: "Гаврилов Иван Петрович",
           position: "Коммерческий директор",
         },
         {
-          image:
-            "/assets/company/team/Чернявский Виктор Павлович, Ведущий инженер по бурению.webp",
+          image: "/assets/company/team/Chernyavskiy.webp",
           name: "Чернявский Виктор Павлович",
           position: "Ведущий инженер по бурению",
         },
         {
-          image:
-            "/assets/company/team/Плотников Богдан Сергеевич, Ведущий геофизик.webp",
+          image: "/assets/company/team/Plotnikov.webp",
           name: "Плотников Богдан Сергеевич",
           position: "Ведущий геофизик",
         },
@@ -91,113 +81,89 @@ const Textaboutus = () => {
       office: "Саратов",
       persons: [
         {
-          image:
-            "/assets/company/team/Лючев Владимир Ильич, Главный энергетик.webp",
+          image: "/assets/company/team/Lyuchev.webp",
           name: "Лючев Владимир Ильич",
           position: "Главный энергетик",
         },
         {
-          image:
-            "/assets/company/team/Горбунов Вадим Валерьевич, Руководитель службы эксплуатации зданий и сооружений.webp",
+          image: "/assets/company/team/Gorbunov.webp",
           name: "Горбунов Вадим Валерьевич",
           position: "Руководитель службы эксплуатации зданий и сооружений",
         },
         {
-          image:
-            "/assets/company/team/Виктор Викторович Балаба, Руководитель службы буровых растворов и цементирования скважин.webp",
+          image: "/assets/company/team/Balaba.webp",
           name: "Балаба Виктор Викторович",
-          position:
-            "Руководитель службы буровых растворов и цементирования скважин",
+          position: "Руководитель службы буровых растворов и цементирования скважин",
         },
         {
-          image:
-            "/assets/company/team/Енютин Иван Михайлович, Заместитель руководителя проекта.webp",
+          image: "/assets/company/team/Enyutin.webp",
           name: "Енютин Иван Михайлович",
           position: "Заместитель руководителя проекта",
         },
         {
-          image:
-            "/assets/company/team/Жучков Сергей Васильевич, Главный инженер-механик.webp",
+          image: "/assets/company/team/Zhuchkov.webp",
           name: "Жучков Сергей Васильевич",
           position: "Главный инженер-механик",
         },
         {
-          image:
-            "/assets/company/team/Лабыкин Данила Андреевич, Руководитель отдела бурения.webp",
+          image: "/assets/company/team/Labykin.webp",
           name: "Лабыкин Данила Андреевич",
           position: "Руководитель отдела бурения",
         },
         {
-          image:
-            "/assets/company/team/Латышева Светлана Владимировна, Ведущий специалист промышленной безопасности и охраны труда.webp",
+          image: "/assets/company/team/Latysheva.webp",
           name: "Латышева Светлана Владимировна",
-          position:
-            "Ведущий специалист промышленной безопасности и охраны труда",
+          position: "Ведущий специалист промышленной безопасности и охраны труда",
         },
         {
-          image:
-            "/assets/company/team/Маликова Лилия Александровна, Эколог.webp",
+          image: "/assets/company/team/Malikova.webp",
           name: "Маликова Лилия Александровна",
           position: "Эколог",
         },
         {
-          image:
-            "/assets/company/team/Морозов Михаил Владимирович, Начальник отдела капитального строительства.webp",
+          image: "/assets/company/team/Morozov.webp",
           name: "Морозов Михаил Владимирович",
           position: "Начальник отдела капитального строительства",
         },
-
         {
-          image:
-            "/assets/company/team/Орлов Максим Александрович, Руководитель отдела закупок.webp",
+          image: "/assets/company/team/Orlov.webp",
           name: "Орлов Максим Александрович",
           position: "Руководитель отдела закупок",
         },
         {
-          image:
-            "/assets/company/team/Поляков Александр Сергеевич, Специалист по закупкам.webp",
+          image: "/assets/company/team/PolyakovAlex.webp",
           name: "Поляков Александр Сергеевич",
           position: "Специалист по закупкам",
         },
         {
-          image:
-            "/assets/company/team/Севостьянов Михаил Геннадьевич, Заместитель руководителя департамента правового сопровождения и комплаенса.webp",
+          image: "/assets/company/team/Sevostyanov.webp",
           name: "Севостьянов Михаил Геннадьевич",
-          position:
-            "Заместитель руководителя департамента правового сопровождения и комплаенса",
+          position: "Заместитель руководителя департамента правового сопровождения и комплаенса",
         },
         {
-          image:
-            "/assets/company/team/Сердобинцева Юлия Констатиновна, Заместитель главного бухгалтера.webp",
-          name: "Сердобинцева Юлия Констатиновна",
+          image: "/assets/company/team/Serdobintseva.webp",
+          name: "Сердобинцева Юлия Константиновна",
           position: "Заместитель главного бухгалтера",
         },
         {
-          image:
-            "/assets/company/team/Федорова Наталья Владимировна, Руководитель департамента правового сопровождения и комплаенса.webp",
+          image: "/assets/company/team/Fedorova.webp",
           name: "Федорова Наталья Владимировна",
-          position:
-            "Руководитель департамента правового сопровождения и комплаенса",
+          position: "Руководитель департамента правового сопровождения и комплаенса",
         },
         {
-          image:
-            "/assets/company/team/Филиппов Григорий Сергеевич, Заместитель руководителя отдела закупок.webp",
+          image: "/assets/company/team/Filippov.webp",
           name: "Филиппов Григорий Сергеевич",
           position: "Заместитель руководителя отдела закупок",
         },
-
         {
-          image:
-            "/assets/company/team/Чурилин Дмитрий Валерьевич, Ведущий юрист департамента правового сопровождения и комплаенса.webp",
+          image: "/assets/company/team/Churilin.webp",
           name: "Чурилин Дмитрий Валерьевич",
-          position:
-            "Ведущий юрист департамента правового сопровождения и комплаенса",
+          position: "Ведущий юрист департамента правового сопровождения и комплаенса",
         },
         {
-          image:
-            "/assets/company/team/Щербаков Илья Вадимович, Заместитель генерального директора по бурению ИКРС.webp",
+          image: "/assets/company/team/Sherbakov.webp",
           name: "Щербаков Илья Вадимович",
-          position: "Заместитель генерального директора по бурению ИКРС",
+          position: "Заместитель генерального директора по бурению и КРС",
         },
       ],
     },
@@ -205,37 +171,34 @@ const Textaboutus = () => {
       office: "Инта",
       persons: [
         {
-          image: "/assets/company/team/Никифоров А.А.jpg",
+          image: "/assets/company/team/Nikifirov.jpg",
           name: "Никифоров Александр Анатольевич",
           position: "Руководить отдела транспортной логистики",
         },
         {
-          image:
-            "/assets/company/team/Попова Людмила Александровна, Администратор офиса.jpg",
+          image: "/assets/company/team/Popova.jpg",
           name: "Попова Людмила Александровна",
           position: "Администратор офиса",
         },
         {
-          image:
-            "/assets/company/team/Шеломанов Виталий Викторович, Заместитель начальника службы АМиС.jpg",
+          image: "/assets/company/team/Shelomanov.jpg",
           name: "Шеломанов Виталий Викторович",
           position: "Заместитель начальника службы АМиС",
         },
         {
-          image:
-            "/assets/company/team/Сикидин Никита Владимирович, Механик.jpg",
+          image: "/assets/company/team/Sikidin.jpg",
           name: "Сикидин Никита Владимирович",
           position: "Механик",
         },
         {
-          image:
-            "/assets/company/team/Абрамов Артем Олегович, Главный механик.jpg",
+          image: "/assets/company/team/Abramov.jpg",
           name: "Абрамов Артем Олегович",
           position: "Главный механик",
         },
       ],
     },
   ];
+  
 
   return (
     <section className={css.wrapper}>
