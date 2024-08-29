@@ -93,7 +93,8 @@ const Textaboutus = () => {
         {
           image: "/assets/company/team/Balaba.webp",
           name: "Балаба Виктор Викторович",
-          position: "Руководитель службы буровых растворов и цементирования скважин",
+          position:
+            "Руководитель службы буровых растворов и цементирования скважин",
         },
         {
           image: "/assets/company/team/Enyutin.webp",
@@ -113,7 +114,8 @@ const Textaboutus = () => {
         {
           image: "/assets/company/team/Latysheva.webp",
           name: "Латышева Светлана Владимировна",
-          position: "Ведущий специалист промышленной безопасности и охраны труда",
+          position:
+            "Ведущий специалист промышленной безопасности и охраны труда",
         },
         {
           image: "/assets/company/team/Malikova.webp",
@@ -138,7 +140,8 @@ const Textaboutus = () => {
         {
           image: "/assets/company/team/Sevostyanov.webp",
           name: "Севостьянов Михаил Геннадьевич",
-          position: "Заместитель руководителя департамента правового сопровождения и комплаенса",
+          position:
+            "Заместитель руководителя департамента правового сопровождения и комплаенса",
         },
         {
           image: "/assets/company/team/Serdobintseva.webp",
@@ -148,7 +151,8 @@ const Textaboutus = () => {
         {
           image: "/assets/company/team/Fedorova.webp",
           name: "Федорова Наталья Владимировна",
-          position: "Руководитель департамента правового сопровождения и комплаенса",
+          position:
+            "Руководитель департамента правового сопровождения и комплаенса",
         },
         {
           image: "/assets/company/team/Filippov.webp",
@@ -158,7 +162,8 @@ const Textaboutus = () => {
         {
           image: "/assets/company/team/Churilin.webp",
           name: "Чурилин Дмитрий Валерьевич",
-          position: "Ведущий юрист департамента правового сопровождения и комплаенса",
+          position:
+            "Ведущий юрист департамента правового сопровождения и комплаенса",
         },
         {
           image: "/assets/company/team/Sherbakov.webp",
@@ -198,7 +203,6 @@ const Textaboutus = () => {
       ],
     },
   ];
-  
 
   return (
     <section className={css.wrapper}>
@@ -212,7 +216,7 @@ const Textaboutus = () => {
             height={411}
             width={411}
             className={cn(
-              "max-h-[570px] object-cover max-w-[411px] rounded-sm",
+              "max-h-[570px] object-cover  rounded-sm",
               css.teamimage
             )}
           />
