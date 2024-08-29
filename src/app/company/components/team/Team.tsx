@@ -97,8 +97,8 @@ const Textaboutus = () => {
         },
         {
           image: "/assets/company/team/Enyutin.webp",
-          name: "Енютин Иван Михайлович",
-          position: "Заместитель руководителя проекта",
+          name: "Лукин Андрей Иванович",
+          position: "Инженер-технолог ТКРС",
         },
         {
           image: "/assets/company/team/Zhuchkov.webp",

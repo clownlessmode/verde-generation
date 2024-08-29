@@ -12,10 +12,15 @@
 
     #ceo {
       display: flex;
-      justify-content: flex-start; /* Изменено с center на flex-start для выравнивания по левому краю */
+      justify-content: flex-start;
       align-items: flex-start;
       max-width: 100%;
       width: 100%;
+
+      .teamimage {
+        max-height: 100%;
+        width: 100%;
+      }
 
       .teammembertext {
         max-width: 411px;
@@ -59,6 +64,11 @@
     max-height: 733px;
     width: 100%;
     height: 100%;
+
+    .teamimage {
+      max-height: 100%;
+      width: 100%;
+    }
   }
 
   .teammembertext {
@@ -89,6 +99,7 @@
 @media screen and (max-width: 1400px) {
   .wrapper {
     padding: 0px 20px;
+
     .teamwrapper {
       justify-content: center;
     }
@@ -98,12 +109,29 @@
 @media screen and (max-width: 500px) {
   .wrapper {
     .teamwrapper {
+      justify-content: center;
+
       .teammember {
         .teamimage {
           min-height: 311px;
           max-width: 100%;
           height: auto;
         }
+      }
+    }
+
+    #ceo {
+      flex-direction: column;
+      align-items: center;
+
+      .teamimage {
+        max-height: 100%;
+        width: 100%;
+      }
+
+      .teammembertext {
+        text-align: center;
+        max-width: 100%;
       }
     }
   }
