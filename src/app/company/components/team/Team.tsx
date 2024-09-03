@@ -31,11 +31,6 @@ const Textaboutus = () => {
           position: "Финансовый директор",
         },
         {
-          image: "/assets/company/team/Vishnyakov.webp",
-          name: "Вишняков Денис Александрович",
-          position: "Бизнес-ассистент",
-        },
-        {
           image: "/assets/company/team/Ruban.webp",
           name: "Рубан Константин Юрьевич",
           position: "Технический директор",
@@ -44,6 +39,11 @@ const Textaboutus = () => {
           image: "/assets/company/team/Karpukhin.webp",
           name: "Карпухин Сергей Михайлович",
           position: "Директор по геологоразведке",
+        },
+        {
+          image: "/assets/company/team/Gavrilov.webp",
+          name: "Гаврилов Иван Петрович",
+          position: "Коммерческий директор",
         },
         {
           image: "/assets/company/team/Perfilova.webp",
@@ -61,11 +61,6 @@ const Textaboutus = () => {
           position: "Ведущий аналитик данных ГИС",
         },
         {
-          image: "/assets/company/team/Gavrilov.webp",
-          name: "Гаврилов Иван Петрович",
-          position: "Коммерческий директор",
-        },
-        {
           image: "/assets/company/team/Chernyavskiy.webp",
           name: "Чернявский Виктор Павлович",
           position: "Ведущий инженер по бурению",
@@ -75,15 +70,42 @@ const Textaboutus = () => {
           name: "Плотников Богдан Сергеевич",
           position: "Ведущий геофизик",
         },
+        {
+          image: "/assets/company/team/Vishnyakov.webp",
+          name: "Вишняков Денис Александрович",
+          position: "Бизнес-ассистент",
+        },
       ],
     },
     {
       office: "Саратов",
       persons: [
         {
-          image: "/assets/company/team/Lyuchev.webp",
-          name: "Лючев Владимир Ильич",
-          position: "Главный энергетик",
+          image: "/assets/company/team/Sherbakov.webp",
+          name: "Щербаков Илья Вадимович",
+          position: "Заместитель генерального директора по бурению и КРС",
+        },
+        {
+          image: "/assets/company/team/Labykin.webp",
+          name: "Лабыкин Данила Андреевич",
+          position: "Руководитель отдела бурения",
+        },
+        {
+          image: "/assets/company/team/Shiryaev.jpg",
+          name: "Ширяев Дмитрий Александрович ",
+          position: "Руководитель отдела ТКРС ",
+        },
+
+        {
+          image: "/assets/company/team/Fedorova.webp",
+          name: "Федорова Наталия Владимировна",
+          position:
+            "Руководитель департамента правового сопровождения и комплаенса",
+        },
+        {
+          image: "/assets/company/team/Serdobintseva.webp",
+          name: "Сердобинцева Юлия Константиновна",
+          position: "Заместитель главного бухгалтера",
         },
         {
           image: "/assets/company/team/Gorbunov.webp",
@@ -97,9 +119,9 @@ const Textaboutus = () => {
             "Руководитель службы буровых растворов и цементирования скважин",
         },
         {
-          image: "/assets/company/team/Enyutin.webp",
-          name: "Лукин Андрей Иванович",
-          position: "Инженер-технолог ТКРС",
+          image: "/assets/company/team/Morozov.webp",
+          name: "Морозов Михаил Владимирович",
+          position: "Начальник отдела капитального строительства",
         },
         {
           image: "/assets/company/team/Zhuchkov.webp",
@@ -107,25 +129,9 @@ const Textaboutus = () => {
           position: "Главный инженер-механик",
         },
         {
-          image: "/assets/company/team/Labykin.webp",
-          name: "Лабыкин Данила Андреевич",
-          position: "Руководитель отдела бурения",
-        },
-        {
-          image: "/assets/company/team/Latysheva.webp",
-          name: "Латышева Светлана Владимировна",
-          position:
-            "Ведущий специалист промышленной безопасности и охраны труда",
-        },
-        {
-          image: "/assets/company/team/Malikova.webp",
-          name: "Маликова Лилия Александровна",
-          position: "Эколог",
-        },
-        {
-          image: "/assets/company/team/Morozov.webp",
-          name: "Морозов Михаил Владимирович",
-          position: "Начальник отдела капитального строительства",
+          image: "/assets/company/team/Lyuchev.webp",
+          name: "Лючев Владимир Ильич",
+          position: "Главный энергетик",
         },
         {
           image: "/assets/company/team/Orlov.webp",
@@ -133,9 +139,9 @@ const Textaboutus = () => {
           position: "Руководитель отдела закупок",
         },
         {
-          image: "/assets/company/team/PolyakovAlex.webp",
-          name: "Поляков Александр Сергеевич",
-          position: "Специалист по закупкам",
+          image: "/assets/company/team/Filippov.webp",
+          name: "Филиппов Григорий Сергеевич",
+          position: "Заместитель руководителя отдела закупок",
         },
         {
           image: "/assets/company/team/Sevostyanov.webp",
@@ -144,31 +150,25 @@ const Textaboutus = () => {
             "Заместитель руководителя департамента правового сопровождения и комплаенса",
         },
         {
-          image: "/assets/company/team/Serdobintseva.webp",
-          name: "Сердобинцева Юлия Константиновна",
-          position: "Заместитель главного бухгалтера",
-        },
-        {
-          image: "/assets/company/team/Fedorova.webp",
-          name: "Федорова Наталья Владимировна",
-          position:
-            "Руководитель департамента правового сопровождения и комплаенса",
-        },
-        {
-          image: "/assets/company/team/Filippov.webp",
-          name: "Филиппов Григорий Сергеевич",
-          position: "Заместитель руководителя отдела закупок",
-        },
-        {
           image: "/assets/company/team/Churilin.webp",
           name: "Чурилин Дмитрий Валерьевич",
           position:
             "Ведущий юрист департамента правового сопровождения и комплаенса",
         },
         {
-          image: "/assets/company/team/Sherbakov.webp",
-          name: "Щербаков Илья Вадимович",
-          position: "Заместитель генерального директора по бурению и КРС",
+          image: "/assets/company/team/Lukin.jpg",
+          name: "Лукин Андрей Иванович",
+          position: "Инженер-технолог ТКРС",
+        },
+        {
+          image: "/assets/company/team/Malikova.webp",
+          name: "Маликова Лилия Александровна",
+          position: "Эколог",
+        },
+        {
+          image: "/assets/company/team/PolyakovAlex.webp",
+          name: "Поляков Александр Сергеевич",
+          position: "Специалист по закупкам",
         },
       ],
     },
@@ -178,17 +178,23 @@ const Textaboutus = () => {
         {
           image: "/assets/company/team/Nikifirov.jpg",
           name: "Никифоров Александр Анатольевич",
-          position: "Руководить отдела транспортной логистики",
+          position: "Руководитель отдела транспортной логистики",
         },
         {
-          image: "/assets/company/team/Popova.jpg",
-          name: "Попова Людмила Александровна",
-          position: "Администратор офиса",
+          image: "/assets/company/team/ShelomanovN.jpg",
+          name: "Шеломанов Николай Викторович",
+          position: "Начальник службы АМиС",
         },
         {
-          image: "/assets/company/team/Shelomanov.jpg",
+          image: "/assets/company/team/ShelomanovV.jpg",
           name: "Шеломанов Виталий Викторович",
           position: "Заместитель начальника службы АМиС",
+        },
+
+        {
+          image: "/assets/company/team/Abramov.jpg",
+          name: "Абрамов Артем Олегович",
+          position: "Главный механик",
         },
         {
           image: "/assets/company/team/Sikidin.jpg",
@@ -196,9 +202,9 @@ const Textaboutus = () => {
           position: "Механик",
         },
         {
-          image: "/assets/company/team/Abramov.jpg",
-          name: "Абрамов Артем Олегович",
-          position: "Главный механик",
+          image: "/assets/company/team/Popova.jpg",
+          name: "Попова Людмила Александровна",
+          position: "Администратор офиса",
         },
       ],
     },
