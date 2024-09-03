@@ -222,7 +222,7 @@ const Textaboutus = () => {
             height={411}
             width={411}
             className={cn(
-              "max-h-[570px] object-cover  rounded-sm",
+              "max-h-[556px] object-cover rounded-sm",
               css.teamimage
             )}
           />
@@ -242,7 +242,7 @@ const Textaboutus = () => {
                 height={411}
                 width={411}
                 className={cn(
-                  "max-h-[570px] object-cover max-w-[411px] rounded-sm",
+                  "h-[556px] w-full object-cover rounded-sm",
                   css.teamimage
                 )}
               />
@@ -264,7 +264,7 @@ const Textaboutus = () => {
                 height={411}
                 width={411}
                 className={cn(
-                  "max-h-[570px] object-cover max-w-[411px] rounded-sm",
+                  "h-[556px] w-full object-cover rounded-sm",
                   css.teamimage
                 )}
               />
@@ -286,7 +286,7 @@ const Textaboutus = () => {
                 height={411}
                 width={411}
                 className={cn(
-                  "max-h-[570px] object-cover max-w-[411px] rounded-sm",
+                  "h-[556px] w-full object-cover rounded-sm",
                   css.teamimage
                 )}
               />
