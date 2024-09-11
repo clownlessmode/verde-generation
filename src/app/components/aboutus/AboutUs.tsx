@@ -12,7 +12,7 @@ const AboutUs = () => {
         <div className={css.imageWrapper}>
           <Image
             alt=""
-            src="/assets/company/aboutus/DSC_7380.JPG"
+            src="/assets/company/aboutus/dsc.jpg"
             layout="responsive"
             width={629}
             height={601}
